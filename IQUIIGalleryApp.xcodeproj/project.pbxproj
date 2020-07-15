@@ -79,13 +79,11 @@
 		F65346CF24BEF6A700770D9B /* IQUIIGalleryApp */ = {
 			isa = PBXGroup;
 			children = (
-				F65346D024BEF6A700770D9B /* AppDelegate.swift */,
-				F65346D224BEF6A700770D9B /* SceneDelegate.swift */,
-				F65346D424BEF6A700770D9B /* ViewController.swift */,
-				F65346D624BEF6A700770D9B /* Main.storyboard */,
-				F65346D924BEF6AC00770D9B /* Assets.xcassets */,
-				F65346DB24BEF6AC00770D9B /* LaunchScreen.storyboard */,
-				F65346DE24BEF6AC00770D9B /* Info.plist */,
+				F65346F624BEF76F00770D9B /* Storyboards */,
+				F65346F524BEF76400770D9B /* Resources */,
+				F65346F424BEF75700770D9B /* View controllers */,
+				F65346F324BEF74500770D9B /* Models */,
+				F65346F224BEF73D00770D9B /* Application */,
 			);
 			path = IQUIIGalleryApp;
 			sourceTree = "<group>";
@@ -97,6 +95,48 @@
 				F65346E924BEF6AC00770D9B /* Info.plist */,
 			);
 			path = IQUIIGalleryAppTests;
+			sourceTree = "<group>";
+		};
+		F65346F224BEF73D00770D9B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F65346DE24BEF6AC00770D9B /* Info.plist */,
+				F65346D024BEF6A700770D9B /* AppDelegate.swift */,
+				F65346D224BEF6A700770D9B /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F65346F324BEF74500770D9B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F65346F424BEF75700770D9B /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F65346D424BEF6A700770D9B /* ViewController.swift */,
+			);
+			path = "View controllers";
+			sourceTree = "<group>";
+		};
+		F65346F524BEF76400770D9B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F65346D924BEF6AC00770D9B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F65346F624BEF76F00770D9B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F65346D624BEF6A700770D9B /* Main.storyboard */,
+				F65346DB24BEF6AC00770D9B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,7 +403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = IQUIIGalleryApp/Info.plist;
+				INFOPLIST_FILE = IQUIIGalleryApp/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = IQUIIGalleryApp/Info.plist;
+				INFOPLIST_FILE = IQUIIGalleryApp/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
