@@ -31,6 +31,8 @@
 		F6D686BD24BF0DA600BB0D3B /* MockRedditServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686BC24BF0DA600BB0D3B /* MockRedditServices.swift */; };
 		F6D686BF24BF0E2600BB0D3B /* RedditServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686BE24BF0E2600BB0D3B /* RedditServicesTests.swift */; };
 		F6D686C124BF12C300BB0D3B /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686C024BF12C300BB0D3B /* PostList.swift */; };
+		F6D686C324BF1B1F00BB0D3B /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686C224BF1B1F00BB0D3B /* Agent.swift */; };
+		F6D686C524BF1B7600BB0D3B /* RealRedditServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686C424BF1B7600BB0D3B /* RealRedditServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		F6D686BC24BF0DA600BB0D3B /* MockRedditServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRedditServices.swift; sourceTree = "<group>"; };
 		F6D686BE24BF0E2600BB0D3B /* RedditServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditServicesTests.swift; sourceTree = "<group>"; };
 		F6D686C024BF12C300BB0D3B /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
+		F6D686C224BF1B1F00BB0D3B /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
+		F6D686C424BF1B7600BB0D3B /* RealRedditServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealRedditServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,8 @@
 				F653470F24BF043400770D9B /* AppError.swift */,
 				F6D686B824BF0B7700BB0D3B /* MockMapOperation.swift */,
 				F6D686BC24BF0DA600BB0D3B /* MockRedditServices.swift */,
+				F6D686C424BF1B7600BB0D3B /* RealRedditServices.swift */,
+				F6D686C224BF1B1F00BB0D3B /* Agent.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -331,7 +337,9 @@
 				F653470124BEFC0300770D9B /* ListViewController.swift in Sources */,
 				F653470E24BF041D00770D9B /* Post.swift in Sources */,
 				F653470524BEFD0400770D9B /* ListCoordinator.swift in Sources */,
+				F6D686C324BF1B1F00BB0D3B /* Agent.swift in Sources */,
 				F6D686B924BF0B7700BB0D3B /* MockMapOperation.swift in Sources */,
+				F6D686C524BF1B7600BB0D3B /* RealRedditServices.swift in Sources */,
 				F65346FC24BEF81B00770D9B /* Coordinator.swift in Sources */,
 				F653470A24BF013B00770D9B /* RedditServices.swift in Sources */,
 				F65346D124BEF6A700770D9B /* AppDelegate.swift in Sources */,

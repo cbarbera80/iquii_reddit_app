@@ -14,14 +14,14 @@ class AppCoordinator: Coordinator {
     let navigator = UINavigationController()
     var coordinators: [Coordinator] = []
     private let services: RedditServices
-    
+     
     init(withWindow window: UIWindow, services: RedditServices) {
         self.window = window
         self.services = services
     }
     
     func start() {
-        let listCoordinator = ListCoordinator(withWindow: window)
+        let listCoordinator = ListCoordinator(withWindow: window, services: services)
         listCoordinator.start()
         coordinators.append(listCoordinator)
     }

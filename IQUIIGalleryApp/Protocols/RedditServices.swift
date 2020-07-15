@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import Combine
 
 protocol RedditServices {
-    func getPosts(forKeyword keyword: String, completion: (Result<[Post], AppError>) -> Void)
+    func getPosts(forKeyword keyword: String, completion: @escaping (Result<[Post], Error>) -> Void)
 }

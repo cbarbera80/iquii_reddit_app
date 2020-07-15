@@ -14,9 +14,11 @@ class ListCoordinator: Coordinator {
     let window: UIWindow
     let navigation: UINavigationController
     let listViewController: ListViewController
+    let services: RedditServices
     
-    init(withWindow window: UIWindow) {
+    init(withWindow window: UIWindow, services: RedditServices) {
         listViewController = ListViewController()
+        self.services = services
         navigation = UINavigationController(rootViewController: listViewController)
         self.window = window
     }
@@ -24,4 +26,5 @@ class ListCoordinator: Coordinator {
     func start() {
         window.rootViewController = navigation
     }
+    
 }

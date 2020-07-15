@@ -9,5 +9,5 @@
 import Foundation
 
 enum AppError: Error, CaseIterable {
-    case invalid
+    case invalidMapping
 }

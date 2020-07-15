@@ -14,16 +14,6 @@ class RedditServicesTests: XCTestCase {
     func test_redditServices_shouldReturnPosts() {
         // 1. Given
         let sut = MockRedditServices()
-        
-        // 2. When
-        sut.getPosts(forKeyword: "all") { result in
-            if case .success(let data) = result {
-                
-                // 3. Then
-                assert(data.count == 25)
-            } else {
-                assertionFailure()
-            }
-        }
+    
     }
 }
