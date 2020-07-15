@@ -18,11 +18,12 @@ class RedditServicesTests: XCTestCase {
         // 2. When
         sut.getPosts(forKeyword: "all") { result in
             if case .success(let data) = result {
+                
+                // 3. Then
                 assert(data.count == 25)
             } else {
                 assertionFailure()
             }
         }
-        
     }
 }
