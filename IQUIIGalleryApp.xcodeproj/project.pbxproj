@@ -17,6 +17,10 @@
 		F65346F824BEF7DF00770D9B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65346F724BEF7DF00770D9B /* AppCoordinator.swift */; };
 		F65346FC24BEF81B00770D9B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65346FB24BEF81B00770D9B /* Coordinator.swift */; };
 		F65346FE24BEF88800770D9B /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65346FD24BEF88800770D9B /* AppCoordinatorTests.swift */; };
+		F653470124BEFC0300770D9B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65346FF24BEFC0300770D9B /* ListViewController.swift */; };
+		F653470224BEFC0300770D9B /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F653470024BEFC0300770D9B /* ListViewController.xib */; };
+		F653470524BEFD0400770D9B /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653470424BEFD0400770D9B /* ListCoordinator.swift */; };
+		F653470724BEFD5400770D9B /* ListCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653470624BEFD5400770D9B /* ListCoordinatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		F65346F724BEF7DF00770D9B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F65346FB24BEF81B00770D9B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F65346FD24BEF88800770D9B /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
+		F65346FF24BEFC0300770D9B /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		F653470024BEFC0300770D9B /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		F653470424BEFD0400770D9B /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
+		F653470624BEFD5400770D9B /* ListCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +97,7 @@
 				F65346F924BEF7E300770D9B /* Coordinators */,
 				F65346F624BEF76F00770D9B /* Storyboards */,
 				F65346F524BEF76400770D9B /* Resources */,
-				F65346F424BEF75700770D9B /* View controllers */,
+				F65346F424BEF75700770D9B /* Scenes */,
 				F65346F324BEF74500770D9B /* Models */,
 				F65346F224BEF73D00770D9B /* Application */,
 			);
@@ -101,6 +109,7 @@
 			children = (
 				F65346E724BEF6AC00770D9B /* IQUIIGalleryAppTests.swift */,
 				F65346FD24BEF88800770D9B /* AppCoordinatorTests.swift */,
+				F653470624BEFD5400770D9B /* ListCoordinatorTests.swift */,
 				F65346E924BEF6AC00770D9B /* Info.plist */,
 			);
 			path = IQUIIGalleryAppTests;
@@ -123,12 +132,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		F65346F424BEF75700770D9B /* View controllers */ = {
+		F65346F424BEF75700770D9B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				F653470324BEFCEE00770D9B /* List */,
 				F65346D424BEF6A700770D9B /* ViewController.swift */,
 			);
-			path = "View controllers";
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		F65346F524BEF76400770D9B /* Resources */ = {
@@ -162,6 +172,16 @@
 				F65346FB24BEF81B00770D9B /* Coordinator.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F653470324BEFCEE00770D9B /* List */ = {
+			isa = PBXGroup;
+			children = (
+				F653470424BEFD0400770D9B /* ListCoordinator.swift */,
+				F65346FF24BEFC0300770D9B /* ListViewController.swift */,
+				F653470024BEFC0300770D9B /* ListViewController.xib */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +267,7 @@
 			files = (
 				F65346DD24BEF6AC00770D9B /* LaunchScreen.storyboard in Resources */,
 				F65346DA24BEF6AC00770D9B /* Assets.xcassets in Resources */,
+				F653470224BEFC0300770D9B /* ListViewController.xib in Resources */,
 				F65346D824BEF6A700770D9B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +288,8 @@
 			files = (
 				F65346F824BEF7DF00770D9B /* AppCoordinator.swift in Sources */,
 				F65346D524BEF6A700770D9B /* ViewController.swift in Sources */,
+				F653470124BEFC0300770D9B /* ListViewController.swift in Sources */,
+				F653470524BEFD0400770D9B /* ListCoordinator.swift in Sources */,
 				F65346FC24BEF81B00770D9B /* Coordinator.swift in Sources */,
 				F65346D124BEF6A700770D9B /* AppDelegate.swift in Sources */,
 				F65346D324BEF6A700770D9B /* SceneDelegate.swift in Sources */,
@@ -277,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F653470724BEFD5400770D9B /* ListCoordinatorTests.swift in Sources */,
 				F65346FE24BEF88800770D9B /* AppCoordinatorTests.swift in Sources */,
 				F65346E824BEF6AC00770D9B /* IQUIIGalleryAppTests.swift in Sources */,
 			);

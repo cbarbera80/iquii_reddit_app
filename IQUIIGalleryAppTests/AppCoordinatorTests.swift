@@ -11,4 +11,21 @@ import XCTest
 
 class AppCoordinatorTests: XCTestCase {
     
+    func testAppCoordinator_onStart_shouldHaveChildCoordinator() {
+        
+        // 1. Given
+        let sut = makeSut()
+        
+        // 2. When
+        sut.start()
+        
+        // 3. Then
+        assert(!sut.coordinators.isEmpty)
+    }
+    
+    func makeSut() -> AppCoordinator {
+        let window = UIWindow()
+        let coordinator = AppCoordinator(withWindow: window)
+        return coordinator
+    }
 }
