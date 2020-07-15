@@ -21,6 +21,11 @@
 		F653470224BEFC0300770D9B /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F653470024BEFC0300770D9B /* ListViewController.xib */; };
 		F653470524BEFD0400770D9B /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653470424BEFD0400770D9B /* ListCoordinator.swift */; };
 		F653470724BEFD5400770D9B /* ListCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653470624BEFD5400770D9B /* ListCoordinatorTests.swift */; };
+		F653470A24BF013B00770D9B /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653470924BF013B00770D9B /* Services.swift */; };
+		F653470C24BF040000770D9B /* PostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653470B24BF040000770D9B /* PostTests.swift */; };
+		F653470E24BF041D00770D9B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653470D24BF041D00770D9B /* Post.swift */; };
+		F653471124BF043800770D9B /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653470F24BF043400770D9B /* AppError.swift */; };
+		F653471324BF044700770D9B /* AppErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653471224BF044700770D9B /* AppErrorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +57,11 @@
 		F653470024BEFC0300770D9B /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 		F653470424BEFD0400770D9B /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
 		F653470624BEFD5400770D9B /* ListCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinatorTests.swift; sourceTree = "<group>"; };
+		F653470924BF013B00770D9B /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		F653470B24BF040000770D9B /* PostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTests.swift; sourceTree = "<group>"; };
+		F653470D24BF041D00770D9B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		F653470F24BF043400770D9B /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		F653471224BF044700770D9B /* AppErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +121,8 @@
 				F65346FD24BEF88800770D9B /* AppCoordinatorTests.swift */,
 				F653470624BEFD5400770D9B /* ListCoordinatorTests.swift */,
 				F65346E924BEF6AC00770D9B /* Info.plist */,
+				F653470B24BF040000770D9B /* PostTests.swift */,
+				F653471224BF044700770D9B /* AppErrorTests.swift */,
 			);
 			path = IQUIIGalleryAppTests;
 			sourceTree = "<group>";
@@ -128,6 +140,8 @@
 		F65346F324BEF74500770D9B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F653470D24BF041D00770D9B /* Post.swift */,
+				F653470F24BF043400770D9B /* AppError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				F65346FB24BEF81B00770D9B /* Coordinator.swift */,
+				F653470924BF013B00770D9B /* Services.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -288,9 +303,12 @@
 			files = (
 				F65346F824BEF7DF00770D9B /* AppCoordinator.swift in Sources */,
 				F65346D524BEF6A700770D9B /* ViewController.swift in Sources */,
+				F653471124BF043800770D9B /* AppError.swift in Sources */,
 				F653470124BEFC0300770D9B /* ListViewController.swift in Sources */,
+				F653470E24BF041D00770D9B /* Post.swift in Sources */,
 				F653470524BEFD0400770D9B /* ListCoordinator.swift in Sources */,
 				F65346FC24BEF81B00770D9B /* Coordinator.swift in Sources */,
+				F653470A24BF013B00770D9B /* Services.swift in Sources */,
 				F65346D124BEF6A700770D9B /* AppDelegate.swift in Sources */,
 				F65346D324BEF6A700770D9B /* SceneDelegate.swift in Sources */,
 			);
@@ -300,7 +318,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F653470C24BF040000770D9B /* PostTests.swift in Sources */,
 				F653470724BEFD5400770D9B /* ListCoordinatorTests.swift in Sources */,
+				F653471324BF044700770D9B /* AppErrorTests.swift in Sources */,
 				F65346FE24BEF88800770D9B /* AppCoordinatorTests.swift in Sources */,
 				F65346E824BEF6AC00770D9B /* IQUIIGalleryAppTests.swift in Sources */,
 			);
