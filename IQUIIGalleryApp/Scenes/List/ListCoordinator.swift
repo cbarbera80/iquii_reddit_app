@@ -20,6 +20,7 @@ class ListCoordinator: Coordinator {
         listViewController = ListViewController()
         self.services = services
         navigation = UINavigationController(rootViewController: listViewController)
+        navigation.navigationBar.prefersLargeTitles = true
         self.window = window
     }
     

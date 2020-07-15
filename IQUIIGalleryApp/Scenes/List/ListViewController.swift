@@ -14,8 +14,8 @@ class ListViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Vars
+    private let redditFilters = RedditFilter.allCases
     
-    private let colors = [UIColor.red, UIColor.green, UIColor.black, UIColor.blue]
     var posts: [Post] = [] {
         didSet {
             collectionView?.reloadData()
@@ -31,6 +31,7 @@ class ListViewController: UIViewController {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(fraction), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
+      
         // Group
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(fraction))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
@@ -42,12 +43,25 @@ class ListViewController: UIViewController {
         return UICollectionViewCompositionalLayout(section: section)
     }()
     
+    lazy var searchController: UISearchController = {
+        let search = UISearchController(searchResultsController: nil)
+        search.obscuresBackgroundDuringPresentation = false
+        search.searchBar.placeholder = "Type something here..."
+        search.searchBar.scopeButtonTitles = redditFilters.map { $0.title }
+        return search
+    }()
+    
+    
+    
     // MARK: - View controller
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.collectionViewLayout = layout
+        title = "IQUII Gallery"
         collectionView.register(ListCollectionViewCell.self)
+        navigationItem.searchController = searchController
     }
+
 }
 
 extension ListViewController: UICollectionViewDataSource {
