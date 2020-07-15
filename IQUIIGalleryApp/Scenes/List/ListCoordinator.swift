@@ -28,7 +28,7 @@ class ListCoordinator: Coordinator {
         getData()
     }
     
-    func getData(forKeyword keyword: String = "All") {
+    func getData(forKeyword keyword: String = "Funny") {
         services.getPosts(forKeyword: keyword) { [weak self] result in
             switch result {
             case .success(let posts):

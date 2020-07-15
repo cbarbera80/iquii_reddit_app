@@ -37,6 +37,7 @@
 		F6D686C924BF321B00BB0D3B /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686C824BF321B00BB0D3B /* UICollectionView+Extensions.swift */; };
 		F6D686CC24BF325F00BB0D3B /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686CA24BF325F00BB0D3B /* ListCollectionViewCell.swift */; };
 		F6D686CD24BF325F00BB0D3B /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D686CB24BF325F00BB0D3B /* ListCollectionViewCell.xib */; };
+		F6D686D124BF397100BB0D3B /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686D024BF397100BB0D3B /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		F6D686C824BF321B00BB0D3B /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		F6D686CA24BF325F00BB0D3B /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		F6D686CB24BF325F00BB0D3B /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCollectionViewCell.xib; sourceTree = "<group>"; };
+		F6D686D024BF397100BB0D3B /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +134,7 @@
 				F65346F424BEF75700770D9B /* Scenes */,
 				F65346F324BEF74500770D9B /* Models */,
 				F65346F224BEF73D00770D9B /* Application */,
-				F6D686C824BF321B00BB0D3B /* UICollectionView+Extensions.swift */,
+				F6D686CF24BF396200BB0D3B /* Extensions */,
 			);
 			path = IQUIIGalleryApp;
 			sourceTree = "<group>";
@@ -248,6 +250,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		F6D686CF24BF396200BB0D3B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F6D686C824BF321B00BB0D3B /* UICollectionView+Extensions.swift */,
+				F6D686D024BF397100BB0D3B /* UIImageView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -356,6 +367,7 @@
 				F6D686C924BF321B00BB0D3B /* UICollectionView+Extensions.swift in Sources */,
 				F6D686BD24BF0DA600BB0D3B /* MockRedditServices.swift in Sources */,
 				F65346D524BEF6A700770D9B /* ViewController.swift in Sources */,
+				F6D686D124BF397100BB0D3B /* UIImageView+Extensions.swift in Sources */,
 				F653471124BF043800770D9B /* AppError.swift in Sources */,
 				F653470124BEFC0300770D9B /* ListViewController.swift in Sources */,
 				F653470E24BF041D00770D9B /* Post.swift in Sources */,

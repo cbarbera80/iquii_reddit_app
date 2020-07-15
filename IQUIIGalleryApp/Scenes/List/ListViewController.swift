@@ -14,6 +14,7 @@ class ListViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Vars
+    
     private let colors = [UIColor.red, UIColor.green, UIColor.black, UIColor.blue]
     var posts: [Post] = [] {
         didSet {
@@ -38,6 +39,7 @@ class ListViewController: UIViewController {
         return UICollectionViewCompositionalLayout(section: section)
     }()
     
+    // MARK: - View controller
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.collectionViewLayout = layout
@@ -52,7 +54,7 @@ extension ListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ListCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.backgroundColor = colors.randomElement()
+        cell.post = posts[indexPath.item]
         return cell
     }
 }
