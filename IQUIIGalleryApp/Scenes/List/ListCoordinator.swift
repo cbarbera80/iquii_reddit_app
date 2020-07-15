@@ -25,6 +25,17 @@ class ListCoordinator: Coordinator {
     
     func start() {
         window.rootViewController = navigation
+        getData()
     }
     
+    func getData(forKeyword keyword: String = "All") {
+        services.getPosts(forKeyword: keyword) { [weak self] result in
+            switch result {
+            case .success(let posts):
+                self?.listViewController.posts = posts
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }

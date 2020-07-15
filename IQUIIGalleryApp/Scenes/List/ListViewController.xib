@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="IQUIIGalleryApp" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="qUV-zH-s9h" id="myP-gu-gue"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,9 +17,31 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qUV-zH-s9h">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6qT-gS-ZOG">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="FVi-yz-z6p"/>
+                        <outlet property="delegate" destination="-1" id="ePj-OX-mmi"/>
+                    </connections>
+                </collectionView>
+            </subviews>
             <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qUV-zH-s9h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8oo-Ys-mag"/>
+                <constraint firstItem="qUV-zH-s9h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9sv-K6-Sx7"/>
+                <constraint firstItem="qUV-zH-s9h" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="nZN-aL-vdg"/>
+                <constraint firstAttribute="bottom" secondItem="qUV-zH-s9h" secondAttribute="bottom" id="yt2-xg-ef7"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="141" y="154"/>
+            <point key="canvasLocation" x="140.57971014492756" y="153.34821428571428"/>
         </view>
     </objects>
 </document>

@@ -21,17 +21,16 @@ struct Agent {
         let task = URLSession.shared.dataTask(with: request) {
             data, response, error in
             
-            
-            if let data = data, let model = try? self.decoder.decode(decoding, from: data) {
+            DispatchQueue.main.async {
                 
-                completion(model, nil)
-                
-            } else if let error = error {
-                completion(nil, error)
-            } else {
-                completion(nil, AppError.invalidMapping)
+                if let data = data, let model = try? self.decoder.decode(decoding, from: data) {
+                    completion(model, nil)
+                } else if let error = error {
+                    completion(nil, error)
+                } else {
+                    completion(nil, AppError.invalidMapping)
+                }
             }
-            
         }
         
         task.resume()
