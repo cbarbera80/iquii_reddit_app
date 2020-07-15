@@ -21,7 +21,7 @@
 		F653470224BEFC0300770D9B /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F653470024BEFC0300770D9B /* ListViewController.xib */; };
 		F653470524BEFD0400770D9B /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653470424BEFD0400770D9B /* ListCoordinator.swift */; };
 		F653470724BEFD5400770D9B /* ListCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653470624BEFD5400770D9B /* ListCoordinatorTests.swift */; };
-		F653470A24BF013B00770D9B /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653470924BF013B00770D9B /* Services.swift */; };
+		F653470A24BF013B00770D9B /* RedditServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653470924BF013B00770D9B /* RedditServices.swift */; };
 		F653470C24BF040000770D9B /* PostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653470B24BF040000770D9B /* PostTests.swift */; };
 		F653470E24BF041D00770D9B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653470D24BF041D00770D9B /* Post.swift */; };
 		F653471124BF043800770D9B /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653470F24BF043400770D9B /* AppError.swift */; };
@@ -29,6 +29,9 @@
 		F6D686B724BF0AFC00BB0D3B /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = F6D686B624BF0AFC00BB0D3B /* posts.json */; };
 		F6D686B924BF0B7700BB0D3B /* MockMapOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686B824BF0B7700BB0D3B /* MockMapOperation.swift */; };
 		F6D686BB24BF0BD200BB0D3B /* MockMapOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686BA24BF0BD200BB0D3B /* MockMapOperationTests.swift */; };
+		F6D686BD24BF0DA600BB0D3B /* MockRedditServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686BC24BF0DA600BB0D3B /* MockRedditServices.swift */; };
+		F6D686BF24BF0E2600BB0D3B /* RedditServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686BE24BF0E2600BB0D3B /* RedditServicesTests.swift */; };
+		F6D686C124BF12C300BB0D3B /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686C024BF12C300BB0D3B /* PostList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +63,7 @@
 		F653470024BEFC0300770D9B /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 		F653470424BEFD0400770D9B /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
 		F653470624BEFD5400770D9B /* ListCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinatorTests.swift; sourceTree = "<group>"; };
-		F653470924BF013B00770D9B /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		F653470924BF013B00770D9B /* RedditServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditServices.swift; sourceTree = "<group>"; };
 		F653470B24BF040000770D9B /* PostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTests.swift; sourceTree = "<group>"; };
 		F653470D24BF041D00770D9B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F653470F24BF043400770D9B /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
@@ -68,6 +71,9 @@
 		F6D686B624BF0AFC00BB0D3B /* posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = posts.json; sourceTree = "<group>"; };
 		F6D686B824BF0B7700BB0D3B /* MockMapOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapOperation.swift; sourceTree = "<group>"; };
 		F6D686BA24BF0BD200BB0D3B /* MockMapOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapOperationTests.swift; sourceTree = "<group>"; };
+		F6D686BC24BF0DA600BB0D3B /* MockRedditServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRedditServices.swift; sourceTree = "<group>"; };
+		F6D686BE24BF0E2600BB0D3B /* RedditServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditServicesTests.swift; sourceTree = "<group>"; };
+		F6D686C024BF12C300BB0D3B /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,7 @@
 				F65346E724BEF6AC00770D9B /* IQUIIGalleryAppTests.swift */,
 				F653470624BEFD5400770D9B /* ListCoordinatorTests.swift */,
 				F6D686BA24BF0BD200BB0D3B /* MockMapOperationTests.swift */,
+				F6D686BE24BF0E2600BB0D3B /* RedditServicesTests.swift */,
 				F653470B24BF040000770D9B /* PostTests.swift */,
 			);
 			path = IQUIIGalleryAppTests;
@@ -147,9 +154,11 @@
 		F65346F324BEF74500770D9B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F6D686C024BF12C300BB0D3B /* PostList.swift */,
 				F653470D24BF041D00770D9B /* Post.swift */,
 				F653470F24BF043400770D9B /* AppError.swift */,
 				F6D686B824BF0B7700BB0D3B /* MockMapOperation.swift */,
+				F6D686BC24BF0DA600BB0D3B /* MockRedditServices.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,7 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				F65346FB24BEF81B00770D9B /* Coordinator.swift */,
-				F653470924BF013B00770D9B /* Services.swift */,
+				F653470924BF013B00770D9B /* RedditServices.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -320,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F65346F824BEF7DF00770D9B /* AppCoordinator.swift in Sources */,
+				F6D686BD24BF0DA600BB0D3B /* MockRedditServices.swift in Sources */,
 				F65346D524BEF6A700770D9B /* ViewController.swift in Sources */,
 				F653471124BF043800770D9B /* AppError.swift in Sources */,
 				F653470124BEFC0300770D9B /* ListViewController.swift in Sources */,
@@ -327,8 +337,9 @@
 				F653470524BEFD0400770D9B /* ListCoordinator.swift in Sources */,
 				F6D686B924BF0B7700BB0D3B /* MockMapOperation.swift in Sources */,
 				F65346FC24BEF81B00770D9B /* Coordinator.swift in Sources */,
-				F653470A24BF013B00770D9B /* Services.swift in Sources */,
+				F653470A24BF013B00770D9B /* RedditServices.swift in Sources */,
 				F65346D124BEF6A700770D9B /* AppDelegate.swift in Sources */,
+				F6D686C124BF12C300BB0D3B /* PostList.swift in Sources */,
 				F65346D324BEF6A700770D9B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +353,7 @@
 				F6D686BB24BF0BD200BB0D3B /* MockMapOperationTests.swift in Sources */,
 				F653471324BF044700770D9B /* AppErrorTests.swift in Sources */,
 				F65346FE24BEF88800770D9B /* AppCoordinatorTests.swift in Sources */,
+				F6D686BF24BF0E2600BB0D3B /* RedditServicesTests.swift in Sources */,
 				F65346E824BEF6AC00770D9B /* IQUIIGalleryAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

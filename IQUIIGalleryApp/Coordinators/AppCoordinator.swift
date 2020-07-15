@@ -13,9 +13,11 @@ class AppCoordinator: Coordinator {
     let window: UIWindow
     let navigator = UINavigationController()
     var coordinators: [Coordinator] = []
+    private let services: RedditServices
     
-    init(withWindow window: UIWindow) {
+    init(withWindow window: UIWindow, services: RedditServices) {
         self.window = window
+        self.services = services
     }
     
     func start() {

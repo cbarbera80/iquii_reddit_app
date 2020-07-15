@@ -25,7 +25,8 @@ class AppCoordinatorTests: XCTestCase {
     
     func makeSut() -> AppCoordinator {
         let window = UIWindow()
-        let coordinator = AppCoordinator(withWindow: window)
+        let services = MockRedditServices()
+        let coordinator = AppCoordinator(withWindow: window, services: services)
         return coordinator
     }
 }

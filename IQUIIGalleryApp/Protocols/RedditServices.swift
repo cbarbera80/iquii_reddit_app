@@ -9,5 +9,5 @@
 import Foundation
 
 protocol RedditServices {
-    func getPosts(forKeyword keyword: String, completion: Result<[Post], AppError>)
+    func getPosts(forKeyword keyword: String, completion: (Result<[Post], AppError>) -> Void)
 }

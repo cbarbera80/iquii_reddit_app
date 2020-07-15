@@ -13,15 +13,12 @@ class PostTests: XCTestCase {
     
     func test_post() {
         // 1. given
-        let sut = Post(id: "1", title: "Fake post", author: "Claudio Barbera", urlString: "http://www.google.it")
+        let sut = Post(thumbnailString: "http://www.google.it")
         
         // 2. when
         
         // 3. then
-        assert(sut.id == "1")
-        assert(sut.title == "Fake post")
-        assert(sut.author == "Claudio Barbera")
-        XCTAssertNotNil(sut.url)
-        assert(sut.url?.absoluteString == "http://www.google.it")
+        XCTAssertNotNil(sut.thumbnail)
+        assert(sut.thumbnail?.absoluteString == "http://www.google.it")
     }
 }

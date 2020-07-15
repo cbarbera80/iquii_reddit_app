@@ -9,17 +9,13 @@
 import Foundation
 
 struct Post: Codable {
-    var id: String
-    var title: String
-    var author: String
-    var urlString: String
+    var thumbnailString: String
     
-    var url: URL? {
-        return URL(string: urlString)
+    var thumbnail: URL? {
+        return URL(string: thumbnailString)
     }
     
     enum CodingKeys: String, CodingKey {
-        case id, title, author
-        case urlString = "url"
+        case thumbnailString = "thumbnail"
     }
 }

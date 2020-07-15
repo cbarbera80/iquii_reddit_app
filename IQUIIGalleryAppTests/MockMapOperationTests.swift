@@ -24,5 +24,4 @@ class MockMapOperationTests: XCTestCase {
         XCTAssertFalse(posts!.isEmpty)
         XCTAssert(posts!.count == 25)
     }
-    
 }
