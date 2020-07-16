@@ -32,10 +32,18 @@ class BookmarksCoordinator: Coordinator {
 
     }
     
-    func start() { }
+    func start() {
+        viewController.delegate = self
+    }
     
     @objc
     private func reloadBookmarks() {
         viewController.items = bookmarkManager.bookmarks
+    }
+}
+
+extension BookmarksCoordinator: BookmarksViewControllerDelegate {
+    func removeBookmark(_ bookmark: Post) {
+        bookmarkManager.remove(bookmark)
     }
 }

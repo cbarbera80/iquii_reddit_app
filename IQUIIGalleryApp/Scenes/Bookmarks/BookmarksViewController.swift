@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol BookmarksViewControllerDelegate: class {
+    func removeBookmark(_ bookmark: Post)
+}
+
 class BookmarksViewController: UIViewController {
 
+    weak var delegate: BookmarksViewControllerDelegate?
     var items: [Post] {
         didSet {
             tableView.reloadData()
@@ -20,6 +25,7 @@ class BookmarksViewController: UIViewController {
     lazy var tableView: UITableView = {
         let table = UITableView()
         table.dataSource = self
+        table.delegate = self
         table.register(BookmarksTableViewCell.self)
         return table
     }()
@@ -52,5 +58,21 @@ extension BookmarksViewController: UITableViewDataSource {
         let cell: BookmarksTableViewCell = tableView.dequeueReusableCell(for: indexPath)
         cell.post = items[indexPath.row]
         return cell
+    }
+}
+
+extension BookmarksViewController: UITableViewDelegate {
+     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        guard editingStyle == .delete else { return }
+        
+        tableView.beginUpdates()
+        
+        let post = items[indexPath.row]
+        items.remove(at: indexPath.row)
+        delegate?.removeBookmark(post)
+        tableView.deleteRows(at: [indexPath], with: .fade)
+        
+        tableView.endUpdates()
     }
 }
