@@ -41,6 +41,8 @@
 		F6D686D324BF3EB200BB0D3B /* RedditFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686D224BF3EB200BB0D3B /* RedditFilter.swift */; };
 		F6D686D524BF563800BB0D3B /* UISearcBarTextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686D424BF563800BB0D3B /* UISearcBarTextField+Extensions.swift */; };
 		F6D686D724C02E2500BB0D3B /* RedditRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686D624C02E2500BB0D3B /* RedditRequest.swift */; };
+		F6D686D924C04AC300BB0D3B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686D824C04AC300BB0D3B /* Constants.swift */; };
+		F6D686DB24C04AF800BB0D3B /* Int+Etensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686DA24C04AF800BB0D3B /* Int+Etensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		F6D686D224BF3EB200BB0D3B /* RedditFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditFilter.swift; sourceTree = "<group>"; };
 		F6D686D424BF563800BB0D3B /* UISearcBarTextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearcBarTextField+Extensions.swift"; sourceTree = "<group>"; };
 		F6D686D624C02E2500BB0D3B /* RedditRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditRequest.swift; sourceTree = "<group>"; };
+		F6D686D824C04AC300BB0D3B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F6D686DA24C04AF800BB0D3B /* Int+Etensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Etensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 				F65346F324BEF74500770D9B /* Models */,
 				F65346F224BEF73D00770D9B /* Application */,
 				F6D686CF24BF396200BB0D3B /* Extensions */,
+				F6D686D824C04AC300BB0D3B /* Constants.swift */,
 			);
 			path = IQUIIGalleryApp;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 				F6D686C824BF321B00BB0D3B /* UICollectionView+Extensions.swift */,
 				F6D686D024BF397100BB0D3B /* UIImageView+Extensions.swift */,
 				F6D686D424BF563800BB0D3B /* UISearcBarTextField+Extensions.swift */,
+				F6D686DA24C04AF800BB0D3B /* Int+Etensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -377,6 +383,7 @@
 				F6D686D324BF3EB200BB0D3B /* RedditFilter.swift in Sources */,
 				F6D686D524BF563800BB0D3B /* UISearcBarTextField+Extensions.swift in Sources */,
 				F6D686BD24BF0DA600BB0D3B /* MockRedditServices.swift in Sources */,
+				F6D686D924C04AC300BB0D3B /* Constants.swift in Sources */,
 				F65346D524BEF6A700770D9B /* ViewController.swift in Sources */,
 				F6D686D124BF397100BB0D3B /* UIImageView+Extensions.swift in Sources */,
 				F653471124BF043800770D9B /* AppError.swift in Sources */,
@@ -390,6 +397,7 @@
 				F6D686C724BF320300BB0D3B /* ReusableView.swift in Sources */,
 				F6D686D724C02E2500BB0D3B /* RedditRequest.swift in Sources */,
 				F653470A24BF013B00770D9B /* RedditServices.swift in Sources */,
+				F6D686DB24C04AF800BB0D3B /* Int+Etensions.swift in Sources */,
 				F65346D124BEF6A700770D9B /* AppDelegate.swift in Sources */,
 				F6D686C124BF12C300BB0D3B /* PostList.swift in Sources */,
 				F65346D324BEF6A700770D9B /* SceneDelegate.swift in Sources */,

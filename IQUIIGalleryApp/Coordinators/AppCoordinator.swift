@@ -18,6 +18,10 @@ class AppCoordinator: Coordinator {
     init(withWindow window: UIWindow, services: RedditServices) {
         self.window = window
         self.services = services
+        
+        // Configure cache
+        URLCache.shared.memoryCapacity = Constants.memoryCacheSize.mb
+        URLCache.shared.diskCapacity = Constants.diskCacheSize.mb
     }
     
     func start() {
