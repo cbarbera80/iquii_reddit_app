@@ -50,6 +50,9 @@
 		F6D686E224C04F8900BB0D3B /* PostDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D686E024C04F8900BB0D3B /* PostDetailsViewController.xib */; };
 		F6D90D1124C07AAF00D37610 /* BookmarksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D90D1024C07AAF00D37610 /* BookmarksCoordinator.swift */; };
 		F6D90D1324C07ADA00D37610 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D90D1224C07ADA00D37610 /* BookmarksViewController.swift */; };
+		F6D90D1524C07E1A00D37610 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D90D1424C07E1A00D37610 /* UITableView+Extensions.swift */; };
+		F6D90D1924C07E5900D37610 /* BookmarksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D90D1724C07E5900D37610 /* BookmarksTableViewCell.swift */; };
+		F6D90D1A24C07E5900D37610 /* BookmarksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D90D1824C07E5900D37610 /* BookmarksTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +113,9 @@
 		F6D686E024C04F8900BB0D3B /* PostDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailsViewController.xib; sourceTree = "<group>"; };
 		F6D90D1024C07AAF00D37610 /* BookmarksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksCoordinator.swift; sourceTree = "<group>"; };
 		F6D90D1224C07ADA00D37610 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		F6D90D1424C07E1A00D37610 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		F6D90D1724C07E5900D37610 /* BookmarksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewCell.swift; sourceTree = "<group>"; };
+		F6D90D1824C07E5900D37610 /* BookmarksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarksTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +311,7 @@
 				F6D686D424BF563800BB0D3B /* UISearcBarTextField+Extensions.swift */,
 				F6D686DA24C04AF800BB0D3B /* Int+Etensions.swift */,
 				F63A88E024C06099001CB0E2 /* UIView+Extensions.swift */,
+				F6D90D1424C07E1A00D37610 /* UITableView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -321,10 +328,20 @@
 		F6D90D0F24C07A9400D37610 /* Bookmarks */ = {
 			isa = PBXGroup;
 			children = (
+				F6D90D1624C07E4900D37610 /* Cells */,
 				F6D90D1024C07AAF00D37610 /* BookmarksCoordinator.swift */,
 				F6D90D1224C07ADA00D37610 /* BookmarksViewController.swift */,
 			);
 			path = Bookmarks;
+			sourceTree = "<group>";
+		};
+		F6D90D1624C07E4900D37610 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F6D90D1724C07E5900D37610 /* BookmarksTableViewCell.swift */,
+				F6D90D1824C07E5900D37610 /* BookmarksTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +425,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D90D1A24C07E5900D37610 /* BookmarksTableViewCell.xib in Resources */,
 				F6D686CD24BF325F00BB0D3B /* ListCollectionViewCell.xib in Resources */,
 				F65346DD24BEF6AC00770D9B /* LaunchScreen.storyboard in Resources */,
 				F6D686B724BF0AFC00BB0D3B /* posts.json in Resources */,
@@ -434,6 +452,7 @@
 				F6D90D1324C07ADA00D37610 /* BookmarksViewController.swift in Sources */,
 				F6D686CC24BF325F00BB0D3B /* ListCollectionViewCell.swift in Sources */,
 				F65346F824BEF7DF00770D9B /* AppCoordinator.swift in Sources */,
+				F6D90D1924C07E5900D37610 /* BookmarksTableViewCell.swift in Sources */,
 				F6D686C924BF321B00BB0D3B /* UICollectionView+Extensions.swift in Sources */,
 				F6D686D324BF3EB200BB0D3B /* RedditFilter.swift in Sources */,
 				F6D686D524BF563800BB0D3B /* UISearcBarTextField+Extensions.swift in Sources */,
@@ -441,6 +460,7 @@
 				F6D686D924C04AC300BB0D3B /* Constants.swift in Sources */,
 				F6D686D124BF397100BB0D3B /* UIImageView+Extensions.swift in Sources */,
 				F653471124BF043800770D9B /* AppError.swift in Sources */,
+				F6D90D1524C07E1A00D37610 /* UITableView+Extensions.swift in Sources */,
 				F653470124BEFC0300770D9B /* ListViewController.swift in Sources */,
 				F653470E24BF041D00770D9B /* Post.swift in Sources */,
 				F653470524BEFD0400770D9B /* PostsCoordinator.swift in Sources */,

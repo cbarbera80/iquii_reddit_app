@@ -25,6 +25,5 @@ class BookmarksCoordinator: Coordinator {
 
     }
     
-    func start() {
-    }
+    func start() { }
 }
