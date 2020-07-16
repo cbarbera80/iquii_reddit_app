@@ -19,4 +19,8 @@ struct PostsRequest: RedditRequest {
     var url: URL {
         return Constants.baseURL.appendingPathComponent("r/\(terms)/\(filter.filter).json")
     }
+    
+    var isValid: Bool {
+        return terms.count >= 3
+    }
 }

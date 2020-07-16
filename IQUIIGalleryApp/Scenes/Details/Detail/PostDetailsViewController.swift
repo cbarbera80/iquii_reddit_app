@@ -16,10 +16,12 @@ class PostDetailsViewController: UIViewController {
     
     // MARK: - Vars
     let post: Post
+    private let isBookmarked: Bool
     
     // MARK: - Init
-    init(withPost post: Post) {
+    init(withPost post: Post, isBookmarked: Bool) {
         self.post = post
+        self.isBookmarked = isBookmarked
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -31,7 +33,7 @@ class PostDetailsViewController: UIViewController {
     // MARK: - View controller
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         imageView.loadImage(from: post.thumbnail) { [weak self] in
             self?.view.layoutIfNeeded()
         }

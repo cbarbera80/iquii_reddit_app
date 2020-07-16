@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F63A88DF24C05FDE001CB0E2 /* PostDetailContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A88DE24C05FDE001CB0E2 /* PostDetailContainerViewController.swift */; };
 		F63A88E124C06099001CB0E2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A88E024C06099001CB0E2 /* UIView+Extensions.swift */; };
+		F63A88E324C06E9E001CB0E2 /* BookmarksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A88E224C06E9E001CB0E2 /* BookmarksManager.swift */; };
+		F63A88E524C06F9E001CB0E2 /* UserDefaultsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63A88E424C06F9E001CB0E2 /* UserDefaultsConfig.swift */; };
 		F65346D124BEF6A700770D9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65346D024BEF6A700770D9B /* AppDelegate.swift */; };
 		F65346D324BEF6A700770D9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65346D224BEF6A700770D9B /* SceneDelegate.swift */; };
 		F65346DA24BEF6AC00770D9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F65346D924BEF6AC00770D9B /* Assets.xcassets */; };
@@ -61,6 +63,8 @@
 /* Begin PBXFileReference section */
 		F63A88DE24C05FDE001CB0E2 /* PostDetailContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailContainerViewController.swift; sourceTree = "<group>"; };
 		F63A88E024C06099001CB0E2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		F63A88E224C06E9E001CB0E2 /* BookmarksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksManager.swift; sourceTree = "<group>"; };
+		F63A88E424C06F9E001CB0E2 /* UserDefaultsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConfig.swift; sourceTree = "<group>"; };
 		F65346CD24BEF6A700770D9B /* IQUIIGalleryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IQUIIGalleryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F65346D024BEF6A700770D9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F65346D224BEF6A700770D9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 				F6D686C224BF1B1F00BB0D3B /* Agent.swift */,
 				F6D686D224BF3EB200BB0D3B /* RedditFilter.swift */,
 				F6D686D624C02E2500BB0D3B /* PostsRequest.swift */,
+				F63A88E224C06E9E001CB0E2 /* BookmarksManager.swift */,
+				F63A88E424C06F9E001CB0E2 /* UserDefaultsConfig.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -431,9 +437,11 @@
 				F6D686C724BF320300BB0D3B /* ReusableView.swift in Sources */,
 				F63A88E124C06099001CB0E2 /* UIView+Extensions.swift in Sources */,
 				F6D686D724C02E2500BB0D3B /* PostsRequest.swift in Sources */,
+				F63A88E524C06F9E001CB0E2 /* UserDefaultsConfig.swift in Sources */,
 				F653470A24BF013B00770D9B /* RedditServices.swift in Sources */,
 				F6D686DB24C04AF800BB0D3B /* Int+Etensions.swift in Sources */,
 				F65346D124BEF6A700770D9B /* AppDelegate.swift in Sources */,
+				F63A88E324C06E9E001CB0E2 /* BookmarksManager.swift in Sources */,
 				F6D686E124C04F8900BB0D3B /* PostDetailsViewController.swift in Sources */,
 				F6D686C124BF12C300BB0D3B /* PostList.swift in Sources */,
 				F65346D324BEF6A700770D9B /* SceneDelegate.swift in Sources */,

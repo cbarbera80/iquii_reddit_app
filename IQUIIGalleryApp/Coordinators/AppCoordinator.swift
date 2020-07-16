@@ -11,8 +11,10 @@ import UIKit
 class AppCoordinator: Coordinator {
     
     let window: UIWindow
-    let navigator = UINavigationController()
     var coordinators: [Coordinator] = []
+    private let navigator = UINavigationController()
+    private let bookmarksManager = BookmarkManager()
+    
     private let services: RedditServices
      
     init(withWindow window: UIWindow, services: RedditServices) {

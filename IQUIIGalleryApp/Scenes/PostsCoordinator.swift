@@ -15,10 +15,12 @@ class PostsCoordinator: Coordinator {
     let navigation: UINavigationController
     let listViewController: ListViewController
     let services: RedditServices
+    let bookmarksManager: BookmarkManager
     
-    init(withWindow window: UIWindow, services: RedditServices) {
+    init(withWindow window: UIWindow, services: RedditServices, bookmarksManager: BookmarkManager = BookmarkManager()) {
         listViewController = ListViewController()
         self.services = services
+        self.bookmarksManager = bookmarksManager
         navigation = UINavigationController(rootViewController: listViewController)
         navigation.navigationBar.prefersLargeTitles = true
         self.window = window
@@ -35,6 +37,8 @@ extension PostsCoordinator: ListViewControllerDelegate {
     
     func search(withRequest request: PostsRequest) {
         
+        guard request.isValid else { return }
+        
         listViewController.status = .loading
         
         services.getPosts(forRequest: request) { [weak self] result in
@@ -48,7 +52,7 @@ extension PostsCoordinator: ListViewControllerDelegate {
     }
     
     func didSelectPost(atIndex index: Int, posts: [Post]) {
-        let detailsContainer = PostDetailContainerViewController(withIndex: index, posts: posts)
+        let detailsContainer = PostDetailContainerViewController(withIndex: index, posts: posts, bookmarksManager: bookmarksManager)
         navigation.pushViewController(detailsContainer, animated: true)
     }
 }
