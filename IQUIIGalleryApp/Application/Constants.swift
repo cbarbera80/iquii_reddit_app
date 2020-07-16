@@ -13,3 +13,7 @@ struct Constants {
     static let diskCacheSize = 10
     static let baseURL = URL(string: "https://www.reddit.com")!
 }
+
+public enum Notifications {
+    public static let bookmarksUpdated = Notification.Name("iquii_gallery_app.bookmarksUpdated")
+}

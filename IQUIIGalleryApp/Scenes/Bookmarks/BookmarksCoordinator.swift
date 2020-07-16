@@ -15,6 +15,10 @@ class BookmarksCoordinator: Coordinator {
     let viewController: BookmarksViewController
     let bookmarkManager: BookmarkManager
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     init(bookmarkManager: BookmarkManager) {
         viewController = BookmarksViewController(withItems: bookmarkManager.bookmarks)
         self.bookmarkManager = bookmarkManager
@@ -22,8 +26,16 @@ class BookmarksCoordinator: Coordinator {
         navigation = UINavigationController(rootViewController: viewController)
         navigation.navigationBar.prefersLargeTitles = true
         navigation.tabBarItem = UITabBarItem(title: "Bookmarks", image: UIImage(systemName: "star"), selectedImage: UIImage(systemName: "star.fill"))
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadBookmarks), name: Notifications.bookmarksUpdated, object: nil)
+        
 
     }
     
     func start() { }
+    
+    @objc
+    private func reloadBookmarks() {
+        viewController.items = bookmarkManager.bookmarks
+    }
 }

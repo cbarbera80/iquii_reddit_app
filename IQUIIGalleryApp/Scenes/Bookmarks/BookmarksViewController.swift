@@ -10,7 +10,11 @@ import UIKit
 
 class BookmarksViewController: UIViewController {
 
-    private let items: [Post]
+    var items: [Post] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     // MARK: - UI
     lazy var tableView: UITableView = {

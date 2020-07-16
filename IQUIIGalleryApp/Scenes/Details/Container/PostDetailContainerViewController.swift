@@ -60,6 +60,7 @@ class PostDetailContainerViewController: UIViewController {
             bookmarksManager.add(current.post)
         
         refreshBookmarksButton(withPost: current.post)
+        NotificationCenter.default.post(name: Notifications.bookmarksUpdated, object: nil)
     }
     
     func refreshBookmarksButton(withPost post: Post) {
