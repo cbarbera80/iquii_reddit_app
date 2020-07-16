@@ -20,7 +20,7 @@ class PostsCoordinator: Coordinator {
         listViewController = ListViewController()
         self.services = services
         self.bookmarksManager = bookmarksManager
-        navigation = UINavigationController(rootViewController: listViewController)
+        navigation = WhiteNavigationController(rootViewController: listViewController)
         navigation.navigationBar.prefersLargeTitles = true
         navigation.tabBarItem = UITabBarItem(title: "List", image: UIImage(systemName: "list.bullet"), selectedImage: UIImage(systemName: "list.bullet"))
         
@@ -53,5 +53,11 @@ extension PostsCoordinator: ListViewControllerDelegate {
     func didSelectPost(atIndex index: Int, posts: [Post]) {
         let detailsContainer = PostDetailContainerViewController(withIndex: index, posts: posts, bookmarksManager: bookmarksManager)
         navigation.pushViewController(detailsContainer, animated: true)
+    }
+    
+    func didShowSettings() {
+        let settingsCoordinator = SettingsCoordinator(presenter: listViewController)
+        settingsCoordinator.start()
+        coordinators.append(settingsCoordinator)
     }
 }

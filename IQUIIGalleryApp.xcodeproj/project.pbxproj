@@ -53,6 +53,11 @@
 		F6D90D1524C07E1A00D37610 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D90D1424C07E1A00D37610 /* UITableView+Extensions.swift */; };
 		F6D90D1924C07E5900D37610 /* BookmarksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D90D1724C07E5900D37610 /* BookmarksTableViewCell.swift */; };
 		F6D90D1A24C07E5900D37610 /* BookmarksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D90D1824C07E5900D37610 /* BookmarksTableViewCell.xib */; };
+		F6D90D1D24C0AA6900D37610 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D90D1C24C0AA6900D37610 /* SettingsCoordinator.swift */; };
+		F6D90D2024C0AA8600D37610 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D90D1E24C0AA8600D37610 /* SettingsViewController.swift */; };
+		F6D90D2124C0AA8600D37610 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D90D1F24C0AA8600D37610 /* SettingsViewController.xib */; };
+		F6D90D2424C0AC1900D37610 /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D90D2324C0AC1900D37610 /* MainTheme.swift */; };
+		F6D90D2624C0AC4A00D37610 /* WhiteNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D90D2524C0AC4A00D37610 /* WhiteNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +121,11 @@
 		F6D90D1424C07E1A00D37610 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		F6D90D1724C07E5900D37610 /* BookmarksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewCell.swift; sourceTree = "<group>"; };
 		F6D90D1824C07E5900D37610 /* BookmarksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarksTableViewCell.xib; sourceTree = "<group>"; };
+		F6D90D1C24C0AA6900D37610 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		F6D90D1E24C0AA8600D37610 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F6D90D1F24C0AA8600D37610 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		F6D90D2324C0AC1900D37610 /* MainTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTheme.swift; sourceTree = "<group>"; };
+		F6D90D2524C0AC4A00D37610 /* WhiteNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +184,7 @@
 		F65346CF24BEF6A700770D9B /* IQUIIGalleryApp */ = {
 			isa = PBXGroup;
 			children = (
+				F6D90D2224C0AC0E00D37610 /* Themes */,
 				F65346F224BEF73D00770D9B /* Application */,
 				F65346F924BEF7E300770D9B /* Coordinators */,
 				F6D686CF24BF396200BB0D3B /* Extensions */,
@@ -233,10 +244,11 @@
 		F65346F424BEF75700770D9B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				F653470424BEFD0400770D9B /* PostsCoordinator.swift */,
 				F653470324BEFCEE00770D9B /* List */,
 				F6D686DE24C04EFA00BB0D3B /* Details */,
 				F6D90D0F24C07A9400D37610 /* Bookmarks */,
+				F6D90D1B24C0AA1E00D37610 /* Settings */,
+				F6D90D2524C0AC4A00D37610 /* WhiteNavigationController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -279,6 +291,7 @@
 		F653470324BEFCEE00770D9B /* List */ = {
 			isa = PBXGroup;
 			children = (
+				F653470424BEFD0400770D9B /* PostsCoordinator.swift */,
 				F65346FF24BEFC0300770D9B /* ListViewController.swift */,
 				F653470024BEFC0300770D9B /* ListViewController.xib */,
 				F6D686CE24BF32B000BB0D3B /* Cells */,
@@ -342,6 +355,24 @@
 				F6D90D1824C07E5900D37610 /* BookmarksTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F6D90D1B24C0AA1E00D37610 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F6D90D1C24C0AA6900D37610 /* SettingsCoordinator.swift */,
+				F6D90D1E24C0AA8600D37610 /* SettingsViewController.swift */,
+				F6D90D1F24C0AA8600D37610 /* SettingsViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F6D90D2224C0AC0E00D37610 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				F6D90D2324C0AC1900D37610 /* MainTheme.swift */,
+			);
+			path = Themes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +459,7 @@
 				F6D90D1A24C07E5900D37610 /* BookmarksTableViewCell.xib in Resources */,
 				F6D686CD24BF325F00BB0D3B /* ListCollectionViewCell.xib in Resources */,
 				F65346DD24BEF6AC00770D9B /* LaunchScreen.storyboard in Resources */,
+				F6D90D2124C0AA8600D37610 /* SettingsViewController.xib in Resources */,
 				F6D686B724BF0AFC00BB0D3B /* posts.json in Resources */,
 				F65346DA24BEF6AC00770D9B /* Assets.xcassets in Resources */,
 				F653470224BEFC0300770D9B /* ListViewController.xib in Resources */,
@@ -464,10 +496,13 @@
 				F653470124BEFC0300770D9B /* ListViewController.swift in Sources */,
 				F653470E24BF041D00770D9B /* Post.swift in Sources */,
 				F653470524BEFD0400770D9B /* PostsCoordinator.swift in Sources */,
+				F6D90D2624C0AC4A00D37610 /* WhiteNavigationController.swift in Sources */,
 				F6D90D1124C07AAF00D37610 /* BookmarksCoordinator.swift in Sources */,
 				F6D686C324BF1B1F00BB0D3B /* Agent.swift in Sources */,
 				F6D686B924BF0B7700BB0D3B /* MockMapOperation.swift in Sources */,
 				F6D686C524BF1B7600BB0D3B /* RealRedditServices.swift in Sources */,
+				F6D90D2424C0AC1900D37610 /* MainTheme.swift in Sources */,
+				F6D90D1D24C0AA6900D37610 /* SettingsCoordinator.swift in Sources */,
 				F65346FC24BEF81B00770D9B /* Coordinator.swift in Sources */,
 				F63A88DF24C05FDE001CB0E2 /* PostDetailContainerViewController.swift in Sources */,
 				F6D686C724BF320300BB0D3B /* ReusableView.swift in Sources */,
@@ -477,6 +512,7 @@
 				F653470A24BF013B00770D9B /* RedditServices.swift in Sources */,
 				F6D686DB24C04AF800BB0D3B /* Int+Etensions.swift in Sources */,
 				F65346D124BEF6A700770D9B /* AppDelegate.swift in Sources */,
+				F6D90D2024C0AA8600D37610 /* SettingsViewController.swift in Sources */,
 				F63A88E324C06E9E001CB0E2 /* BookmarksManager.swift in Sources */,
 				F6D686E124C04F8900BB0D3B /* PostDetailsViewController.swift in Sources */,
 				F6D686C124BF12C300BB0D3B /* PostList.swift in Sources */,

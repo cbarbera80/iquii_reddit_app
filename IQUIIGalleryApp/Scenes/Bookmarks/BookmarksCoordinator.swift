@@ -23,7 +23,7 @@ class BookmarksCoordinator: Coordinator {
         viewController = BookmarksViewController(withItems: bookmarkManager.bookmarks)
         self.bookmarkManager = bookmarkManager
         
-        navigation = UINavigationController(rootViewController: viewController)
+        navigation = WhiteNavigationController(rootViewController: viewController)
         navigation.navigationBar.prefersLargeTitles = true
         navigation.tabBarItem = UITabBarItem(title: "Bookmarks", image: UIImage(systemName: "star"), selectedImage: UIImage(systemName: "star.fill"))
         

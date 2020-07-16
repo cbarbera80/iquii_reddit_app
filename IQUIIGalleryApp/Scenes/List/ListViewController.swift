@@ -12,6 +12,7 @@ import Combine
 protocol ListViewControllerDelegate: class {
     func search(withRequest request: PostsRequest)
     func didSelectPost(atIndex index: Int, posts: [Post])
+    func didShowSettings()
 }
 
 class ListViewController: UIViewController {
@@ -100,6 +101,8 @@ class ListViewController: UIViewController {
         super.viewDidLoad()
         title = "IQUII Gallery"
         
+        // Bar button
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .done, target: self, action: #selector(showSettingsAction))
         // Collection view setup
         collectionView.collectionViewLayout = layout
         collectionView.register(ListCollectionViewCell.self)
@@ -116,6 +119,12 @@ class ListViewController: UIViewController {
             .sink { request in self.delegate?.search(withRequest: request) }
         
         subscription.store(in: &store)
+    }
+    
+    // MARK: - Actions
+    @objc
+    private func showSettingsAction() {
+        delegate?.didShowSettings()
     }
 }
 
