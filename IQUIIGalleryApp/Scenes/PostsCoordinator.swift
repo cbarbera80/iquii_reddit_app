@@ -23,6 +23,8 @@ class PostsCoordinator: Coordinator {
         self.bookmarksManager = bookmarksManager
         navigation = UINavigationController(rootViewController: listViewController)
         navigation.navigationBar.prefersLargeTitles = true
+        navigation.tabBarItem = UITabBarItem(title: "List", image: UIImage(systemName: "list.bullet"), selectedImage: UIImage(systemName: "list.bullet"))
+        
         self.window = window
     }
     

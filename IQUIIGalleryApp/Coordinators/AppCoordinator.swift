@@ -27,8 +27,17 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
+        
+        let tabBarController = UITabBarController()
+        
         let listCoordinator = PostsCoordinator(withWindow: window, services: services)
         listCoordinator.start()
         coordinators.append(listCoordinator)
+        
+        tabBarController.viewControllers = [
+            listCoordinator.navigation
+        ]
+        
+        window.rootViewController = tabBarController
     }
 }
