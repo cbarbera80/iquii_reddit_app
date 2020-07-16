@@ -30,12 +30,16 @@ class AppCoordinator: Coordinator {
         
         let tabBarController = UITabBarController()
         
-        let listCoordinator = PostsCoordinator(withWindow: window, services: services)
+        let listCoordinator = PostsCoordinator(services: services, bookmarksManager: bookmarksManager)
         listCoordinator.start()
         coordinators.append(listCoordinator)
         
+        let bookmarksCoordinator = BookmarksCoordinator(bookmarkManager: bookmarksManager)
+        coordinators.append(bookmarksCoordinator)
+        
         tabBarController.viewControllers = [
-            listCoordinator.navigation
+            listCoordinator.navigation,
+            bookmarksCoordinator.navigation
         ]
         
         window.rootViewController = tabBarController

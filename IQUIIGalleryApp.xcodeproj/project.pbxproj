@@ -48,6 +48,8 @@
 		F6D686DB24C04AF800BB0D3B /* Int+Etensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686DA24C04AF800BB0D3B /* Int+Etensions.swift */; };
 		F6D686E124C04F8900BB0D3B /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686DF24C04F8900BB0D3B /* PostDetailsViewController.swift */; };
 		F6D686E224C04F8900BB0D3B /* PostDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D686E024C04F8900BB0D3B /* PostDetailsViewController.xib */; };
+		F6D90D1124C07AAF00D37610 /* BookmarksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D90D1024C07AAF00D37610 /* BookmarksCoordinator.swift */; };
+		F6D90D1324C07ADA00D37610 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D90D1224C07ADA00D37610 /* BookmarksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,8 @@
 		F6D686DA24C04AF800BB0D3B /* Int+Etensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Etensions.swift"; sourceTree = "<group>"; };
 		F6D686DF24C04F8900BB0D3B /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 		F6D686E024C04F8900BB0D3B /* PostDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailsViewController.xib; sourceTree = "<group>"; };
+		F6D90D1024C07AAF00D37610 /* BookmarksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksCoordinator.swift; sourceTree = "<group>"; };
+		F6D90D1224C07ADA00D37610 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +230,7 @@
 				F653470424BEFD0400770D9B /* PostsCoordinator.swift */,
 				F653470324BEFCEE00770D9B /* List */,
 				F6D686DE24C04EFA00BB0D3B /* Details */,
+				F6D90D0F24C07A9400D37610 /* Bookmarks */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -311,6 +316,15 @@
 				F63A88DD24C05FBC001CB0E2 /* Detail */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		F6D90D0F24C07A9400D37610 /* Bookmarks */ = {
+			isa = PBXGroup;
+			children = (
+				F6D90D1024C07AAF00D37610 /* BookmarksCoordinator.swift */,
+				F6D90D1224C07ADA00D37610 /* BookmarksViewController.swift */,
+			);
+			path = Bookmarks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D90D1324C07ADA00D37610 /* BookmarksViewController.swift in Sources */,
 				F6D686CC24BF325F00BB0D3B /* ListCollectionViewCell.swift in Sources */,
 				F65346F824BEF7DF00770D9B /* AppCoordinator.swift in Sources */,
 				F6D686C924BF321B00BB0D3B /* UICollectionView+Extensions.swift in Sources */,
@@ -429,6 +444,7 @@
 				F653470124BEFC0300770D9B /* ListViewController.swift in Sources */,
 				F653470E24BF041D00770D9B /* Post.swift in Sources */,
 				F653470524BEFD0400770D9B /* PostsCoordinator.swift in Sources */,
+				F6D90D1124C07AAF00D37610 /* BookmarksCoordinator.swift in Sources */,
 				F6D686C324BF1B1F00BB0D3B /* Agent.swift in Sources */,
 				F6D686B924BF0B7700BB0D3B /* MockMapOperation.swift in Sources */,
 				F6D686C524BF1B7600BB0D3B /* RealRedditServices.swift in Sources */,

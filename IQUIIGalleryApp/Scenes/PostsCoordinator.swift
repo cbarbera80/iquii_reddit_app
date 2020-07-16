@@ -11,13 +11,12 @@ import UIKit
 class PostsCoordinator: Coordinator {
     
     var coordinators: [Coordinator] = []
-    let window: UIWindow
     let navigation: UINavigationController
     let listViewController: ListViewController
     let services: RedditServices
     let bookmarksManager: BookmarkManager
     
-    init(withWindow window: UIWindow, services: RedditServices, bookmarksManager: BookmarkManager = BookmarkManager()) {
+    init(services: RedditServices, bookmarksManager: BookmarkManager = BookmarkManager()) {
         listViewController = ListViewController()
         self.services = services
         self.bookmarksManager = bookmarksManager
@@ -25,12 +24,10 @@ class PostsCoordinator: Coordinator {
         navigation.navigationBar.prefersLargeTitles = true
         navigation.tabBarItem = UITabBarItem(title: "List", image: UIImage(systemName: "list.bullet"), selectedImage: UIImage(systemName: "list.bullet"))
         
-        self.window = window
     }
     
     func start() {
         listViewController.delegate = self
-        window.rootViewController = navigation
         search(withRequest: .init(terms: "All", filter: .top))
     }
 }

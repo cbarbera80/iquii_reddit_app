@@ -33,4 +33,8 @@ class BookmarkManager {
     func save() {
         UserDefaultsConfig.bookmarks = Array(data)
     }
+    
+    var bookmarks: [Post] {
+        return Array(data)
+    }
 }
