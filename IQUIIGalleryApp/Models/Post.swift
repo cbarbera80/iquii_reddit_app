@@ -9,7 +9,10 @@
 import Foundation
 
 struct Post: Codable, Hashable {
-    var thumbnailString: String
+    let thumbnailString: String
+    let title: String
+    let author: String
+    let score: Int
     
     var thumbnail: URL? {
         return URL(string: thumbnailString)
@@ -17,5 +20,8 @@ struct Post: Codable, Hashable {
     
     enum CodingKeys: String, CodingKey {
         case thumbnailString = "thumbnail"
+        case title
+        case author = "author_fullname"
+        case score = "total_awards_received"
     }
 }

@@ -11,10 +11,16 @@ import UIKit
 class BookmarksTableViewCell: UITableViewCell, NibLoadableView, ReusableView {
 
     @IBOutlet weak var postImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var pointsLabel: UILabel!
     
     var post: Post? {
         didSet {
             postImageView.loadImage(from: post?.thumbnail)
+            titleLabel.text = post?.title
+            authorLabel.text = post?.author
+            pointsLabel.text = "\(post?.score ?? 0) points"
         }
     }
 }
