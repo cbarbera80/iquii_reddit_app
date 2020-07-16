@@ -38,9 +38,9 @@ class ListCoordinatorTests: XCTestCase {
         
     }
     
-    private func makeSut() -> ListCoordinator {
+    private func makeSut() -> PostsCoordinator {
         let window = UIWindow()
-        let listCoordinator = ListCoordinator(withWindow: window, services: MockRedditServices())
+        let listCoordinator = PostsCoordinator(withWindow: window, services: MockRedditServices())
         return listCoordinator
     }
 }

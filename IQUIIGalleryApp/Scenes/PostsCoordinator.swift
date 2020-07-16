@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListCoordinator: Coordinator {
+class PostsCoordinator: Coordinator {
     
     var coordinators: [Coordinator] = []
     let window: UIWindow
@@ -31,7 +31,8 @@ class ListCoordinator: Coordinator {
     }
 }
 
-extension ListCoordinator: ListViewControllerDelegate {
+extension PostsCoordinator: ListViewControllerDelegate {
+    
     func search(withRequest request: PostsRequest) {
         
         listViewController.status = .loading
@@ -44,5 +45,10 @@ extension ListCoordinator: ListViewControllerDelegate {
                 self?.listViewController.status = .error(error: error)
             }
         }
+    }
+    
+    func didSelectPost(_ post: Post) {
+        let detailsViewController = PostDetailsViewController(withPost: post)
+        navigation.pushViewController(detailsViewController, animated: true)
     }
 }

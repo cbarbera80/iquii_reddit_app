@@ -11,6 +11,7 @@ import Combine
 
 protocol ListViewControllerDelegate: class {
     func search(withRequest request: PostsRequest)
+    func didSelectPost(_ post: Post)
 }
 
 class ListViewController: UIViewController {
@@ -127,6 +128,12 @@ extension ListViewController: UICollectionViewDataSource {
         let cell: ListCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.post = posts[indexPath.item]
         return cell
+    }
+}
+
+extension ListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelectPost(posts[indexPath.item])
     }
 }
 

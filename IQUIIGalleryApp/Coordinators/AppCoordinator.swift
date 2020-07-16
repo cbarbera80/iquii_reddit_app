@@ -25,7 +25,7 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        let listCoordinator = ListCoordinator(withWindow: window, services: services)
+        let listCoordinator = PostsCoordinator(withWindow: window, services: services)
         listCoordinator.start()
         coordinators.append(listCoordinator)
     }
