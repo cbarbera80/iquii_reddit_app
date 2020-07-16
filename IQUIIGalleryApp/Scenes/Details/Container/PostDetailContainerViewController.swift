@@ -19,6 +19,7 @@ class PostDetailContainerViewController: UIViewController {
     lazy var pageViewController: UIPageViewController = {
         let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         pageViewController.dataSource = self
+        pageViewController.delegate = self
         return pageViewController
     }()
     
@@ -41,11 +42,11 @@ class PostDetailContainerViewController: UIViewController {
         view.backgroundColor = .white
         pageViewController.view.pin(to: view)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "star"), style: .plain, target: self, action: #selector(toggleBookmark))
-        
         let first = getDetailsViewController(atIndex: index)
         pageViewController.setViewControllers([first], direction: .forward, animated: false, completion: nil)
         
+        title = first.post.title
+        refreshBookmarksButton(withPost: first.post)
         addChild(pageViewController)
         pageViewController.didMove(toParent: self)
     }
@@ -54,11 +55,19 @@ class PostDetailContainerViewController: UIViewController {
     func toggleBookmark() {
         guard let current = pageViewController.viewControllers?.last as? PostDetailsViewController else { return }
         
-        bookmarksManager.contains(current.post) ? bookmarksManager.remove(current.post) : bookmarksManager.add(current.post)
+        bookmarksManager.contains(current.post) ?
+            bookmarksManager.remove(current.post) :
+            bookmarksManager.add(current.post)
+        
+        refreshBookmarksButton(withPost: current.post)
+    }
+    
+    func refreshBookmarksButton(withPost post: Post) {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: bookmarksManager.contains(post) ? "pin.fill" : "pin"), style: .plain, target: self, action: #selector(toggleBookmark))
     }
 }
 
-extension PostDetailContainerViewController: UIPageViewControllerDataSource {
+extension PostDetailContainerViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
@@ -78,6 +87,13 @@ extension PostDetailContainerViewController: UIPageViewControllerDataSource {
         let post = posts[index]
         let isBookmarked = bookmarksManager.contains(post)
         return PostDetailsViewController(withPost: post, isBookmarked: isBookmarked)
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        
+        guard let current = pageViewController.viewControllers?.last as? PostDetailsViewController else { return }
+        title = current.post.title
+        refreshBookmarksButton(withPost: current.post)
     }
 }
 
