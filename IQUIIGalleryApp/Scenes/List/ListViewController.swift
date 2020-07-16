@@ -10,7 +10,7 @@ import UIKit
 import Combine
 
 protocol ListViewControllerDelegate: class {
-    func search(withKeyword keyword: String?, andFilter filter: RedditFilter)
+    func search(withRequest request: RedditRequest)
 }
 
 class ListViewController: UIViewController {
@@ -29,6 +29,9 @@ class ListViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     
     // MARK: - Vars
+    private var searchTermSubject = PassthroughSubject<String, Never>()
+    private var filterSubject = PassthroughSubject<RedditFilter, Never>()
+    
     weak var delegate: ListViewControllerDelegate?
     var status: ListViewControllerStatus = .idle {
         didSet {
@@ -86,6 +89,7 @@ class ListViewController: UIViewController {
         search.obscuresBackgroundDuringPresentation = false
         search.searchBar.placeholder = "Type something here..."
         search.searchBar.scopeButtonTitles = redditFilters.map { $0.title }
+        search.searchResultsUpdater = self
         return search
     }()
     
@@ -93,32 +97,23 @@ class ListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.collectionViewLayout = layout
         title = "IQUII Gallery"
-        collectionView.register(ListCollectionViewCell.self)
-        navigationItem.searchController = searchController
-        addSearchBarListener()
-    }
-    
-    // MARK: -
-    fileprivate func addSearchBarListener() {
-      
-        let searchBarTextFieldPublisher = NotificationCenter.default.publisher(for: UISearchTextField.textDidChangeNotification, object: searchController.searchBar.searchTextField)
         
-        let subscription = searchBarTextFieldPublisher
-                                .map { ($0.object as! UISearchTextField).searchBar }
-                                .debounce(for: .milliseconds(500), scheduler: RunLoop.main)
-                                .removeDuplicates()
-                                .compactMap { $0 }
-                                .sink { searchBar in
-                                    let searchText = searchBar.searchTextField.text
-                                    let filter = self.redditFilters[searchBar.selectedScopeButtonIndex]
-                                    if let search = searchText, search.count >= 3 {
-                                        self.delegate?.search(withKeyword: search, andFilter: filter)
-                                    }
-                                    
-                                }
-    
+        // Collection view setup
+        collectionView.collectionViewLayout = layout
+        collectionView.register(ListCollectionViewCell.self)
+        
+        // Search setup
+        navigationItem.searchController = searchController
+         
+        // Events listener setup
+        let subscription = Publishers
+            .CombineLatest(searchTermSubject, filterSubject)
+            .map { RedditRequest(terms: $0.0, filter: $0.1) }
+            .debounce(for: .milliseconds(500), scheduler: RunLoop.main)
+            .eraseToAnyPublisher()
+            .sink { request in self.delegate?.search(withRequest: request) }
+        
         subscription.store(in: &store)
     }
 }
@@ -132,5 +127,15 @@ extension ListViewController: UICollectionViewDataSource {
         let cell: ListCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.post = posts[indexPath.item]
         return cell
+    }
+}
+
+extension ListViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchText = searchController.searchBar.text ?? ""
+        let scope = searchController.searchBar.selectedScopeButtonIndex
+        
+        searchTermSubject.send(searchText)
+        filterSubject.send(redditFilters[scope])
     }
 }

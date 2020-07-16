@@ -27,18 +27,16 @@ class ListCoordinator: Coordinator {
     func start() {
         listViewController.delegate = self
         window.rootViewController = navigation
-        search(withKeyword: "All", andFilter: .top)
+        search(withRequest: .init(terms: "All", filter: .top))
     }
 }
 
 extension ListCoordinator: ListViewControllerDelegate {
-    func search(withKeyword keyword: String?, andFilter filter: RedditFilter) {
-        
-        guard let keyword = keyword else { return }
+    func search(withRequest request: RedditRequest) {
         
         listViewController.status = .loading
         
-        services.getPosts(forKeyword: keyword, andFilter: filter) { [weak self] result in
+        services.getPosts(forRequest: request) { [weak self] result in
             switch result {
             case .success(let posts):
                 self?.listViewController.status = posts.isEmpty ? .noData : .completed(posts: posts)

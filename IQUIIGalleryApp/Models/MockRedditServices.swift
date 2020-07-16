@@ -9,8 +9,8 @@
 import Foundation
 
 class MockRedditServices: RedditServices {
-   
-    func getPosts(forKeyword keyword: String, andFilter filter: RedditFilter, completion: @escaping (Result<[Post], Error>) -> Void) {
+    func getPosts(forRequest request: RedditRequest, completion: @escaping (Result<[Post], Error>) -> Void) {
+        
         let mock = MockMapOperation<RedditData>()
         
         guard let data = mock.decode(from: "posts") else {
