@@ -33,8 +33,8 @@ class PostDetailsViewController: UIViewController {
     // MARK: - View controller
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        imageView.loadImage(from: post.thumbnail) { [weak self] in
+
+        imageView.loadImage(from: post.url) { [weak self] in
             self?.view.layoutIfNeeded()
         }
     }
