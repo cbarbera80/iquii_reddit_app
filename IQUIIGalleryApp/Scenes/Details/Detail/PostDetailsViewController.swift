@@ -15,7 +15,7 @@ class PostDetailsViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     // MARK: - Vars
-    private let post: Post
+    let post: Post
     
     // MARK: - Init
     init(withPost post: Post) {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Post: Codable {
+struct Post: Codable, Equatable {
     var thumbnailString: String
     
     var thumbnail: URL? {

@@ -11,7 +11,7 @@ import Combine
 
 protocol ListViewControllerDelegate: class {
     func search(withRequest request: PostsRequest)
-    func didSelectPost(_ post: Post)
+    func didSelectPost(atIndex index: Int, posts: [Post])
 }
 
 class ListViewController: UIViewController {
@@ -133,7 +133,7 @@ extension ListViewController: UICollectionViewDataSource {
 
 extension ListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didSelectPost(posts[indexPath.item])
+        delegate?.didSelectPost(atIndex: indexPath.item, posts: posts)
     }
 }
 
