@@ -10,7 +10,7 @@ import UIKit
 import Combine
 
 protocol ListViewControllerDelegate: class {
-    func search(withRequest request: RedditRequest)
+    func search(withRequest request: PostsRequest)
 }
 
 class ListViewController: UIViewController {
@@ -109,7 +109,7 @@ class ListViewController: UIViewController {
         // Events listener setup
         let subscription = Publishers
             .CombineLatest(searchTermSubject, filterSubject)
-            .map { RedditRequest(terms: $0.0, filter: $0.1) }
+            .map { PostsRequest(terms: $0.0, filter: $0.1) }
             .debounce(for: .milliseconds(500), scheduler: RunLoop.main)
             .eraseToAnyPublisher()
             .sink { request in self.delegate?.search(withRequest: request) }

@@ -13,9 +13,9 @@ class RealRedditServices: RedditServices {
     
     let agent = Agent()
     
-    func getPosts(forRequest request: RedditRequest, completion: @escaping (Result<[Post], Error>) -> Void) {
+    func getPosts(forRequest request: PostsRequest, completion: @escaping (Result<[Post], Error>) -> Void) {
         
-        var urlRequest = URLRequest(url: Constants.baseURL.appendingPathComponent("r/\(request.terms)/\(request.filter.filter).json"))
+        var urlRequest = URLRequest(url: request.url)
         
         urlRequest.cachePolicy = .returnCacheDataElseLoad
         

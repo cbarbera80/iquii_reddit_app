@@ -8,7 +8,15 @@
 
 import Foundation
 
-struct RedditRequest {
+protocol RedditRequest {
+    var url: URL { get }
+}
+
+struct PostsRequest: RedditRequest {
     let terms: String
     let filter: RedditFilter
+    
+    var url: URL {
+        return Constants.baseURL.appendingPathComponent("r/\(terms)/\(filter.filter).json")
+    }
 }

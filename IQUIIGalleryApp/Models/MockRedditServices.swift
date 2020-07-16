@@ -9,7 +9,7 @@
 import Foundation
 
 class MockRedditServices: RedditServices {
-    func getPosts(forRequest request: RedditRequest, completion: @escaping (Result<[Post], Error>) -> Void) {
+    func getPosts(forRequest request: PostsRequest, completion: @escaping (Result<[Post], Error>) -> Void) {
         
         let mock = MockMapOperation<RedditData>()
         

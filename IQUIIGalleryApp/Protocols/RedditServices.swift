@@ -10,5 +10,5 @@ import Foundation
 import Combine
 
 protocol RedditServices {
-    func getPosts(forRequest request: RedditRequest, completion: @escaping (Result<[Post], Error>) -> Void)
+    func getPosts(forRequest request: PostsRequest, completion: @escaping (Result<[Post], Error>) -> Void)
 }

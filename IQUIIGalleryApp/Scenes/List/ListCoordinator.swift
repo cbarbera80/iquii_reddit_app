@@ -32,7 +32,7 @@ class ListCoordinator: Coordinator {
 }
 
 extension ListCoordinator: ListViewControllerDelegate {
-    func search(withRequest request: RedditRequest) {
+    func search(withRequest request: PostsRequest) {
         
         listViewController.status = .loading
         
