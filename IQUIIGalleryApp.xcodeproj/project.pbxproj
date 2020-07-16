@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F65346D124BEF6A700770D9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65346D024BEF6A700770D9B /* AppDelegate.swift */; };
 		F65346D324BEF6A700770D9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65346D224BEF6A700770D9B /* SceneDelegate.swift */; };
-		F65346D524BEF6A700770D9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65346D424BEF6A700770D9B /* ViewController.swift */; };
 		F65346DA24BEF6AC00770D9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F65346D924BEF6AC00770D9B /* Assets.xcassets */; };
 		F65346DD24BEF6AC00770D9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F65346DB24BEF6AC00770D9B /* LaunchScreen.storyboard */; };
 		F65346E824BEF6AC00770D9B /* IQUIIGalleryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65346E724BEF6AC00770D9B /* IQUIIGalleryAppTests.swift */; };
@@ -59,7 +58,6 @@
 		F65346CD24BEF6A700770D9B /* IQUIIGalleryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IQUIIGalleryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F65346D024BEF6A700770D9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F65346D224BEF6A700770D9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F65346D424BEF6A700770D9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F65346D924BEF6AC00770D9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F65346DC24BEF6AC00770D9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F65346DE24BEF6AC00770D9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,15 +135,14 @@
 		F65346CF24BEF6A700770D9B /* IQUIIGalleryApp */ = {
 			isa = PBXGroup;
 			children = (
-				F65346FA24BEF7FF00770D9B /* Protocols */,
+				F65346F224BEF73D00770D9B /* Application */,
 				F65346F924BEF7E300770D9B /* Coordinators */,
-				F65346F624BEF76F00770D9B /* Storyboards */,
+				F6D686CF24BF396200BB0D3B /* Extensions */,
+				F65346F324BEF74500770D9B /* Models */,
+				F65346FA24BEF7FF00770D9B /* Protocols */,
 				F65346F524BEF76400770D9B /* Resources */,
 				F65346F424BEF75700770D9B /* Scenes */,
-				F65346F324BEF74500770D9B /* Models */,
-				F65346F224BEF73D00770D9B /* Application */,
-				F6D686CF24BF396200BB0D3B /* Extensions */,
-				F6D686D824C04AC300BB0D3B /* Constants.swift */,
+				F65346F624BEF76F00770D9B /* Storyboards */,
 			);
 			path = IQUIIGalleryApp;
 			sourceTree = "<group>";
@@ -168,6 +165,7 @@
 		F65346F224BEF73D00770D9B /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				F6D686D824C04AC300BB0D3B /* Constants.swift */,
 				F65346DE24BEF6AC00770D9B /* Info.plist */,
 				F65346D024BEF6A700770D9B /* AppDelegate.swift */,
 				F65346D224BEF6A700770D9B /* SceneDelegate.swift */,
@@ -195,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				F653470324BEFCEE00770D9B /* List */,
-				F65346D424BEF6A700770D9B /* ViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -384,7 +381,6 @@
 				F6D686D524BF563800BB0D3B /* UISearcBarTextField+Extensions.swift in Sources */,
 				F6D686BD24BF0DA600BB0D3B /* MockRedditServices.swift in Sources */,
 				F6D686D924C04AC300BB0D3B /* Constants.swift in Sources */,
-				F65346D524BEF6A700770D9B /* ViewController.swift in Sources */,
 				F6D686D124BF397100BB0D3B /* UIImageView+Extensions.swift in Sources */,
 				F653471124BF043800770D9B /* AppError.swift in Sources */,
 				F653470124BEFC0300770D9B /* ListViewController.swift in Sources */,

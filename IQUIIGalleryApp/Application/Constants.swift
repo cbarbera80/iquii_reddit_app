@@ -11,4 +11,5 @@ import Foundation
 struct Constants {
     static let memoryCacheSize = 30
     static let diskCacheSize = 10
+    static let baseURL = URL(string: "https://www.reddit.com")!
 }

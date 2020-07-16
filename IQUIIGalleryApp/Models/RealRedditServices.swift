@@ -12,11 +12,10 @@ import Combine
 class RealRedditServices: RedditServices {
     
     let agent = Agent()
-    let base = URL(string: "https://www.reddit.com")!
     
     func getPosts(forRequest request: RedditRequest, completion: @escaping (Result<[Post], Error>) -> Void) {
         
-        var urlRequest = URLRequest(url: base.appendingPathComponent("r/\(request.terms)/\(request.filter.filter).json"))
+        var urlRequest = URLRequest(url: Constants.baseURL.appendingPathComponent("r/\(request.terms)/\(request.filter.filter).json"))
         
         urlRequest.cachePolicy = .returnCacheDataElseLoad
         
@@ -27,7 +26,5 @@ class RealRedditServices: RedditServices {
                 completion(.failure(error))
             }
         }
-        
     }
-    
 }
