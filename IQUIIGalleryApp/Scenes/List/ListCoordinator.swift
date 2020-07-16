@@ -25,17 +25,25 @@ class ListCoordinator: Coordinator {
     }
     
     func start() {
+        listViewController.delegate = self
         window.rootViewController = navigation
-        getData()
+        search(withKeyword: "All", andFilter: .top)
     }
-    
-    func getData(forKeyword keyword: String = "Funny") {
-        services.getPosts(forKeyword: keyword) { [weak self] result in
+}
+
+extension ListCoordinator: ListViewControllerDelegate {
+    func search(withKeyword keyword: String?, andFilter filter: RedditFilter) {
+        
+        guard let keyword = keyword else { return }
+        
+        listViewController.status = .loading
+        
+        services.getPosts(forKeyword: keyword, andFilter: filter) { [weak self] result in
             switch result {
             case .success(let posts):
-                self?.listViewController.posts = posts
+                self?.listViewController.status = posts.isEmpty ? .noData : .completed(posts: posts)
             case .failure(let error):
-                print(error)
+                self?.listViewController.status = .error(error: error)
             }
         }
     }

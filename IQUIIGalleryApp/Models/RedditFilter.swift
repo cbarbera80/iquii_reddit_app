@@ -9,15 +9,12 @@
 import Foundation
 
 enum RedditFilter: CaseIterable {
-    case none
+    case top
     case hot
     case new
-    case top
     
     var title: String {
         switch self {
-        case .none:
-            return "All"
         case .hot:
             return "Hot"
         case .new:
@@ -27,16 +24,14 @@ enum RedditFilter: CaseIterable {
         }
     }
     
-    var filter: String? {
+    var filter: String {
         switch self {
-        case .none:
-            return nil
         case .hot:
-            return "/hot"
+            return "hot"
         case .new:
-            return "/new"
+            return "new"
         case .top:
-            return "/top"
+            return "top"
         }
     }
 }

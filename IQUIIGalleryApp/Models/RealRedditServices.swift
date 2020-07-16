@@ -14,8 +14,8 @@ class RealRedditServices: RedditServices {
     let agent = Agent()
     let base = URL(string: "https://www.reddit.com")!
 
-    func getPosts(forKeyword keyword: String, completion: @escaping (Result<[Post], Error>) -> Void) {
-        let request = URLRequest(url: base.appendingPathComponent("r/\(keyword)/top.json"))
+    func getPosts(forKeyword keyword: String, andFilter filter: RedditFilter, completion: @escaping (Result<[Post], Error>) -> Void) {
+        let request = URLRequest(url: base.appendingPathComponent("r/\(keyword)/\(filter).json"))
         
         agent.getData(from: request, decoding: RedditData.self) { data, error in
             if let data = data {

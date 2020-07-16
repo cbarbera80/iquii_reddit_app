@@ -23,7 +23,7 @@ final class MockMapOperation<Model: Decodable> {
             return nil
         }
         
-        let model = try! decoder.decode(Model.self, from: data)
+        let model = try? decoder.decode(Model.self, from: data)
         return model
     }
 }

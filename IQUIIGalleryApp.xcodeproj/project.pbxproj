@@ -39,6 +39,7 @@
 		F6D686CD24BF325F00BB0D3B /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D686CB24BF325F00BB0D3B /* ListCollectionViewCell.xib */; };
 		F6D686D124BF397100BB0D3B /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686D024BF397100BB0D3B /* UIImageView+Extensions.swift */; };
 		F6D686D324BF3EB200BB0D3B /* RedditFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686D224BF3EB200BB0D3B /* RedditFilter.swift */; };
+		F6D686D524BF563800BB0D3B /* UISearcBarTextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686D424BF563800BB0D3B /* UISearcBarTextField+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		F6D686CB24BF325F00BB0D3B /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCollectionViewCell.xib; sourceTree = "<group>"; };
 		F6D686D024BF397100BB0D3B /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		F6D686D224BF3EB200BB0D3B /* RedditFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditFilter.swift; sourceTree = "<group>"; };
+		F6D686D424BF563800BB0D3B /* UISearcBarTextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearcBarTextField+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 			children = (
 				F6D686C824BF321B00BB0D3B /* UICollectionView+Extensions.swift */,
 				F6D686D024BF397100BB0D3B /* UIImageView+Extensions.swift */,
+				F6D686D424BF563800BB0D3B /* UISearcBarTextField+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				F65346F824BEF7DF00770D9B /* AppCoordinator.swift in Sources */,
 				F6D686C924BF321B00BB0D3B /* UICollectionView+Extensions.swift in Sources */,
 				F6D686D324BF3EB200BB0D3B /* RedditFilter.swift in Sources */,
+				F6D686D524BF563800BB0D3B /* UISearcBarTextField+Extensions.swift in Sources */,
 				F6D686BD24BF0DA600BB0D3B /* MockRedditServices.swift in Sources */,
 				F65346D524BEF6A700770D9B /* ViewController.swift in Sources */,
 				F6D686D124BF397100BB0D3B /* UIImageView+Extensions.swift in Sources */,

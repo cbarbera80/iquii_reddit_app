@@ -7,20 +7,58 @@
 //
 
 import UIKit
+import Combine
+
+protocol ListViewControllerDelegate: class {
+    func search(withKeyword keyword: String?, andFilter filter: RedditFilter)
+}
 
 class ListViewController: UIViewController {
 
+    // MARK: - Enums
+    enum ListViewControllerStatus {
+        case idle
+        case loading
+        case completed(posts: [Post])
+        case noData
+        case error(error: Error)
+    }
+    
     // MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var statusLabel: UILabel!
     
     // MARK: - Vars
-    private let redditFilters = RedditFilter.allCases
-    
-    var posts: [Post] = [] {
+    weak var delegate: ListViewControllerDelegate?
+    var status: ListViewControllerStatus = .idle {
         didSet {
-            collectionView?.reloadData()
+            switch status {
+            case .idle:
+                break
+            case .loading:
+                collectionView?.isHidden = true
+                statusLabel?.isHidden = false
+                statusLabel?.text = "Loading data..."
+            case .completed(let posts):
+                collectionView?.isHidden = false
+                statusLabel?.isHidden = true
+                self.posts = posts
+                self.collectionView?.reloadData()
+            case .noData:
+                collectionView?.isHidden = true
+                statusLabel?.isHidden = false
+                statusLabel?.text = "No data found"
+            case .error(let error):
+                collectionView?.isHidden = true
+                statusLabel?.isHidden = false
+                statusLabel?.text = error.localizedDescription
+            }
         }
     }
+    
+    private let redditFilters = RedditFilter.allCases
+    private var store: [AnyCancellable] = []
+    private var posts: [Post] = []
     
     lazy var layout: UICollectionViewLayout = {
         
@@ -51,17 +89,38 @@ class ListViewController: UIViewController {
         return search
     }()
     
-    
-    
     // MARK: - View controller
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.collectionViewLayout = layout
         title = "IQUII Gallery"
         collectionView.register(ListCollectionViewCell.self)
         navigationItem.searchController = searchController
+        addSearchBarListener()
     }
-
+    
+    // MARK: -
+    fileprivate func addSearchBarListener() {
+      
+        let searchBarTextFieldPublisher = NotificationCenter.default.publisher(for: UISearchTextField.textDidChangeNotification, object: searchController.searchBar.searchTextField)
+        
+        let subscription = searchBarTextFieldPublisher
+                                .map { ($0.object as! UISearchTextField).searchBar }
+                                .debounce(for: .milliseconds(500), scheduler: RunLoop.main)
+                                .removeDuplicates()
+                                .compactMap { $0 }
+                                .sink { searchBar in
+                                    let searchText = searchBar.searchTextField.text
+                                    let filter = self.redditFilters[searchBar.selectedScopeButtonIndex]
+                                    if let search = searchText, search.count >= 3 {
+                                        self.delegate?.search(withKeyword: search, andFilter: filter)
+                                    }
+                                    
+                                }
+    
+        subscription.store(in: &store)
+    }
 }
 
 extension ListViewController: UICollectionViewDataSource {
