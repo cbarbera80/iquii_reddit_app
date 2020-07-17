@@ -10,21 +10,27 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var versionLabel: UILabel!
+    
+    private var appVersionString: String {
+        
+        guard let appVersionString = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString"),
+            let appBuildString = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") else { return "" }
+        
+        return "\(appVersionString) build \(appBuildString)"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        versionLabel.text = appVersionString
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func clearCache() {
+        URLCache.shared.removeAllCachedResponses()
+        
+        let alert = UIAlertController(title: "IQUII Gallery App", message: "Cache cleared successfully", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
     }
-    */
-
 }

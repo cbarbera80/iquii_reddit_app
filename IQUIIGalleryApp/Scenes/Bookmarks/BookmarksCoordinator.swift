@@ -43,6 +43,14 @@ class BookmarksCoordinator: Coordinator {
 }
 
 extension BookmarksCoordinator: BookmarksViewControllerDelegate {
+    
+    func openDetails(index: Int, posts: [Post]) {
+        removeCoordinator(PostDetailsCoordinator.self)
+        let detailsCoordinator = PostDetailsCoordinator(presenter: navigation, index: index, posts: posts, bookmarksManager: bookmarkManager)
+        detailsCoordinator.start()
+        coordinators.append(detailsCoordinator)
+    }
+    
     func removeBookmark(_ bookmark: Post) {
         bookmarkManager.remove(bookmark)
     }

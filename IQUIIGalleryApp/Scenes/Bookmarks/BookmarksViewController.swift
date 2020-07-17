@@ -10,6 +10,7 @@ import UIKit
 
 protocol BookmarksViewControllerDelegate: class {
     func removeBookmark(_ bookmark: Post)
+    func openDetails(index: Int, posts: [Post])
 }
 
 class BookmarksViewController: UIViewController {
@@ -74,5 +75,9 @@ extension BookmarksViewController: UITableViewDelegate {
         tableView.deleteRows(at: [indexPath], with: .fade)
         
         tableView.endUpdates()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.openDetails(index: indexPath.row, posts: items)
     }
 }
