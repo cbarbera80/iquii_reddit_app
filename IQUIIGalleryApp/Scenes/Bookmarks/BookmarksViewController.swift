@@ -44,7 +44,7 @@ class BookmarksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Bookmarks"
+        title = "bookmarks.page.title".localized
         view.backgroundColor = .white
         tableView.pin(to: view)
     }

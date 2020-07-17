@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  IQUIIGalleryApp
+
+  Created by claudio barbera on 17/07/2020.
+  Copyright © 2020 iquii. All rights reserved.
+*/
+
+"tab_bar.list" = "List";
+"tab_bar.bookmarks" = "Bookmarks";
+
+"list.page.title" = "IQUII Gallery";
+"list.filter.text" = "Type something here...";
+
+"bookmarks.page.title" = "Bookmarks";
+"bookmarks.author.text" = "Author";
+"bookmarks.points.text" = "%i points";
+
+"settings.version" = "Version";
+"settings.clear_cache" = "Clear cache";
+"settings.page.title" = "IQUII Gallery App";
+"settings.cache_clear" = "Cache purged successfully";
+"settings.ok" = "Ok";

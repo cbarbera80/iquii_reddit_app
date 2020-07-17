@@ -25,11 +25,9 @@ class BookmarksCoordinator: Coordinator {
         
         navigation = WhiteNavigationController(rootViewController: viewController)
         navigation.navigationBar.prefersLargeTitles = true
-        navigation.tabBarItem = UITabBarItem(title: "Bookmarks", image: UIImage(systemName: "star"), selectedImage: UIImage(systemName: "star.fill"))
+        navigation.tabBarItem = UITabBarItem(title: "tab_bar.bookmarks".localized, image: UIImage(systemName: "star"), selectedImage: UIImage(systemName: "star.fill"))
         
         NotificationCenter.default.addObserver(self, selector: #selector(reloadBookmarks), name: Notifications.bookmarksUpdated, object: nil)
-        
-
     }
     
     func start() {

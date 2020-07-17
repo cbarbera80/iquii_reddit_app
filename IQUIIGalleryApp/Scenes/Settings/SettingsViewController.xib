@@ -26,6 +26,9 @@
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="settings.page.title"/>
+                            </userDefinedRuntimeAttributes>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1FZ-DV-Weu">
                             <rect key="frame" x="81" y="61" width="108.5" height="24"/>
@@ -35,6 +38,9 @@
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="settings.version"/>
+                                    </userDefinedRuntimeAttributes>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzA-8T-NKM">
                                     <rect key="frame" x="73" y="0.0" width="35.5" height="24"/>
@@ -47,6 +53,9 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBy-Ir-Lcf">
                             <rect key="frame" x="94" y="105" width="82" height="30"/>
                             <state key="normal" title="Clear cache"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="settings.clear_cache"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="clearCache" destination="-1" eventType="touchUpInside" id="4rb-NM-hMU"/>
                             </connections>

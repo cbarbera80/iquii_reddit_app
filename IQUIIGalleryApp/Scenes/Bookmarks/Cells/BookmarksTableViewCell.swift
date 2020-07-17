@@ -20,7 +20,8 @@ class BookmarksTableViewCell: UITableViewCell, NibLoadableView, ReusableView {
             postImageView.loadImage(from: post?.thumbnail)
             titleLabel.text = post?.title
             authorLabel.text = post?.author
-            pointsLabel.text = "\(post?.score ?? 0) points"
+            let points = "\(post?.score ?? 0)"
+            pointsLabel.text =   "bookmarks.points.text".localized.replacingOccurrences(of: "%i", with: points)
         }
     }
 }

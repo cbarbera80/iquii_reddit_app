@@ -89,7 +89,7 @@ class ListViewController: UIViewController {
     lazy var searchController: UISearchController = {
         let search = UISearchController(searchResultsController: nil)
         search.obscuresBackgroundDuringPresentation = false
-        search.searchBar.placeholder = "Type something here..."
+        search.searchBar.placeholder = "list.filter.text".localized
         search.searchBar.scopeButtonTitles = redditFilters.map { $0.title }
         search.searchResultsUpdater = self
         return search
@@ -99,7 +99,7 @@ class ListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "IQUII Gallery"
+        title = "list.page.title".localized
         
         // Bar button
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .done, target: self, action: #selector(showSettingsAction))

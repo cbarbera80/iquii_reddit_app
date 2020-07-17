@@ -28,8 +28,8 @@ class SettingsViewController: UIViewController {
     @IBAction func clearCache() {
         URLCache.shared.removeAllCachedResponses()
         
-        let alert = UIAlertController(title: "IQUII Gallery App", message: "Cache cleared successfully", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let alert = UIAlertController(title: "settings.page.title".localized, message: "settings.cache_clear".localized, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "settings.ok".localized, style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
