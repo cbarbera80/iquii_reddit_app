@@ -51,8 +51,11 @@ extension PostsCoordinator: ListViewControllerDelegate {
     }
     
     func didSelectPost(atIndex index: Int, posts: [Post]) {
-        let detailsContainer = PostDetailContainerViewController(withIndex: index, posts: posts, bookmarksManager: bookmarksManager)
-        navigation.pushViewController(detailsContainer, animated: true)
+        
+        let detailsCoordinator = PostDetailsCoordinator(presenter: navigation, index: index, posts: posts, bookmarksManager: bookmarksManager)
+        detailsCoordinator.start()
+        removeCoordinator(PostDetailsCoordinator.self)
+        coordinators.append(detailsCoordinator)
     }
     
     func didShowSettings() {

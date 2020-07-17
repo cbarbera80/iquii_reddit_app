@@ -28,6 +28,7 @@
 		F653470E24BF041D00770D9B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653470D24BF041D00770D9B /* Post.swift */; };
 		F653471124BF043800770D9B /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653470F24BF043400770D9B /* AppError.swift */; };
 		F653471324BF044700770D9B /* AppErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653471224BF044700770D9B /* AppErrorTests.swift */; };
+		F695870624C1E9EF0030DAD2 /* PostDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F695870524C1E9EF0030DAD2 /* PostDetailsCoordinator.swift */; };
 		F6D686B724BF0AFC00BB0D3B /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = F6D686B624BF0AFC00BB0D3B /* posts.json */; };
 		F6D686B924BF0B7700BB0D3B /* MockMapOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686B824BF0B7700BB0D3B /* MockMapOperation.swift */; };
 		F6D686BB24BF0BD200BB0D3B /* MockMapOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D686BA24BF0BD200BB0D3B /* MockMapOperationTests.swift */; };
@@ -75,7 +76,7 @@
 		F63A88E024C06099001CB0E2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		F63A88E224C06E9E001CB0E2 /* BookmarksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksManager.swift; sourceTree = "<group>"; };
 		F63A88E424C06F9E001CB0E2 /* UserDefaultsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConfig.swift; sourceTree = "<group>"; };
-		F65346CD24BEF6A700770D9B /* IQUIIGalleryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IQUIIGalleryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F65346CD24BEF6A700770D9B /* IQUII Gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IQUII Gallery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F65346D024BEF6A700770D9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F65346D224BEF6A700770D9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F65346D924BEF6AC00770D9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +97,7 @@
 		F653470D24BF041D00770D9B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F653470F24BF043400770D9B /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		F653471224BF044700770D9B /* AppErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrorTests.swift; sourceTree = "<group>"; };
+		F695870524C1E9EF0030DAD2 /* PostDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsCoordinator.swift; sourceTree = "<group>"; };
 		F6D686B624BF0AFC00BB0D3B /* posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = posts.json; sourceTree = "<group>"; };
 		F6D686B824BF0B7700BB0D3B /* MockMapOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapOperation.swift; sourceTree = "<group>"; };
 		F6D686BA24BF0BD200BB0D3B /* MockMapOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapOperationTests.swift; sourceTree = "<group>"; };
@@ -175,7 +177,7 @@
 		F65346CE24BEF6A700770D9B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F65346CD24BEF6A700770D9B /* IQUIIGalleryApp.app */,
+				F65346CD24BEF6A700770D9B /* IQUII Gallery.app */,
 				F65346E324BEF6AC00770D9B /* IQUIIGalleryAppTests.xctest */,
 			);
 			name = Products;
@@ -332,6 +334,7 @@
 		F6D686DE24C04EFA00BB0D3B /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				F695870524C1E9EF0030DAD2 /* PostDetailsCoordinator.swift */,
 				F63A88DC24C05FB4001CB0E2 /* Container */,
 				F63A88DD24C05FBC001CB0E2 /* Detail */,
 			);
@@ -392,7 +395,7 @@
 			);
 			name = IQUIIGalleryApp;
 			productName = IQUIIGalleryApp;
-			productReference = F65346CD24BEF6A700770D9B /* IQUIIGalleryApp.app */;
+			productReference = F65346CD24BEF6A700770D9B /* IQUII Gallery.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F65346E224BEF6AC00770D9B /* IQUIIGalleryAppTests */ = {
@@ -514,6 +517,7 @@
 				F65346D124BEF6A700770D9B /* AppDelegate.swift in Sources */,
 				F6D90D2024C0AA8600D37610 /* SettingsViewController.swift in Sources */,
 				F63A88E324C06E9E001CB0E2 /* BookmarksManager.swift in Sources */,
+				F695870624C1E9EF0030DAD2 /* PostDetailsCoordinator.swift in Sources */,
 				F6D686E124C04F8900BB0D3B /* PostDetailsViewController.swift in Sources */,
 				F6D686C124BF12C300BB0D3B /* PostList.swift in Sources */,
 				F65346D324BEF6A700770D9B /* SceneDelegate.swift in Sources */,
@@ -681,7 +685,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = it.iquii.galleryapp.IQUIIGalleryApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "IQUII Gallery";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -698,7 +702,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = it.iquii.galleryapp.IQUIIGalleryApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "IQUII Gallery";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
