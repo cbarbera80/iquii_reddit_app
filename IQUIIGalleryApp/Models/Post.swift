@@ -9,14 +9,15 @@
 import Foundation
 
 struct Post: Codable, Hashable {
-    let thumbnailString: String
+    let thumbnailString: String?
     let urlString: String?
     let title: String
-    let author: String
+    let author: String?
     let score: Int
     let type: String?
     
     var thumbnail: URL? {
+        guard let thumbnailString = thumbnailString else { return nil }
         return URL(string: thumbnailString)
     }
     

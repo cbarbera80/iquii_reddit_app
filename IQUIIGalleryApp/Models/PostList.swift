@@ -9,11 +9,9 @@
 import Foundation
 
 struct RedditData: Decodable {
-    let kind: String
     let list: Listing
     
     enum CodingKeys: String, CodingKey {
-        case kind
         case list = "data"
     }
 }
@@ -22,11 +20,11 @@ struct Listing: Decodable {
     private let children: [ListPost]
     
     var posts: [Post] {
-        return children.map { $0.data }
+        return children.compactMap { $0.data }
     }
 }
 
 struct ListPost: Decodable {
     let kind: String
-    let data: Post
+    let data: Post?
 }
